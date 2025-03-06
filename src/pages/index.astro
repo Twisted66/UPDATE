@@ -2,6 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
 <Layout title="Home">
   
   <main>
@@ -45,7 +49,7 @@ import Layout from '../layouts/Layout.astro';
               <!-- Front Image -->
               <div class="absolute inset-0 transform translate-z-[150px]">
                 <div class="w-full h-full bg-white/5 rounded-2xl overflow-hidden backdrop-blur-sm border border-white/10">
-                  <img src="/api/placeholder/800/600" alt="Building Project" class="w-full h-full object-cover opacity-80">
+                 <model-viewer src="/3D/BUILDING.glb" alt="3D Building Model" auto-rotate camera-controls style="width: 100%; height: 100%;" class="w-full h-full object-cover opacity-80"></model-viewer>
                 </div>
               </div>
               
@@ -296,11 +300,8 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           
-          <div class="testimonial-card bg-white/5 rounded-xl p- backdrop-blur-md border border-white/10 transition-all duration-300 hover:transform hover:-translate-y-3 hover:shadow-xl relative">
+          <div class="testimonial-card bg-white/5 rounded-xl p-8 backdrop-blur-md border border-white/10 transition-all duration-300 hover:transform hover:-translate-y-3 hover:shadow-xl relative">
             <div class="quote-icon absolute top-6 right-6 text-primary/20 text-6xl">"</div>
-            <p class="testimonial-text text-lg leading-relaxed mb-6 relative z-10 text-gray-300">
-              Working with Ultraction on our community center project was a seamless experience from concept to completion. Their innovative approach to sustainable building practices resulted in a facility that not only serves our community beautifully but also operates with minimal environmental impact.
-            </p>
             <div class="testimonial-author flex items-center">
               <img src="/api/placeholder/60/60" alt="Client" class="w-14 h-14 rounded-full object-cover mr-4">
               <div>
@@ -325,79 +326,82 @@ import Layout from '../layouts/Layout.astro';
         </p>
         <a href="/contact" class="cta-button inline-block px-10 py-4 bg-gradient-primary text-white no-underline font-semibold rounded transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/30">Contact Us Today</a>
       </div>
-    </section>
+    </section>type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   </main>
 </Layout>
-
+ully loaded before running the script
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Hero content animation
+  // Wait for the DOM to be fully loaded before running the script
+  document.addEventListener('DOMContentLoaded', () => {const heroContent = document.getElementById('heroContent');
+    // Hero content animationlementById('hero3dContent');
     const heroContent = document.getElementById('heroContent');
     const hero3dContent = document.getElementById('hero3dContent');
     
-    if (heroContent && hero3dContent) {
-      setTimeout(() => {
-        heroContent.classList.add('opacity-100', 'translate-y-0');
+    if (heroContent && hero3dContent) {ntent.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {   hero3dContent.classList.add('opacity-100', 'translate-y-0');
+        heroContent.classList.add('opacity-100', 'translate-y-0');  }, 500);
         hero3dContent.classList.add('opacity-100', 'translate-y-0');
       }, 500);
     }
-    
-    // 3D Animation with mouse movement
     const hero3dElement = document.querySelector('.hero-3d-element');
     const hero3dWrapper = document.querySelector('.hero-3d-wrapper');
-    
-    if (hero3dWrapper && hero3dElement) {
+    -element');
+    if (hero3dWrapper && hero3dElement) {wrapper');
       hero3dWrapper.addEventListener('mousemove', (e) => {
         const rect = hero3dWrapper.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const mouseX = e.clientX - centerX;
+        const centerX = rect.left + rect.width / 2;move', (e) => {
+        const centerY = rect.top + rect.height / 2;ingClientRect();
+        const mouseX = e.clientX - centerX;const centerX = rect.left + rect.width / 2;
         const mouseY = e.clientY - centerY;
         
-        const rotateX = (mouseY / rect.height) * 20;
+        const rotateX = (mouseY / rect.height) * 20;const mouseY = e.clientY - centerY;
         const rotateY = (mouseX / rect.width) * 20;
-        
-        hero3dElement.style.transform = `
+         rect.height) * 20;
+        hero3dElement.style.transform = `/ rect.width) * 20;
           rotateX(${-rotateX}deg)
-          rotateY(${rotateY}deg)
-          translateZ(50px)
-        `;
+          rotateY(${rotateY}deg)ro3dElement.style.transform = `
+          translateZ(50px) rotateX(${-rotateX}deg)
+        `;    rotateY(${rotateY}deg)
       });
       
       hero3dWrapper.addEventListener('mouseleave', () => {
-        hero3dElement.style.transform = 'rotateX(0) rotateY(0) translateZ(50px)';
-      });
-    }
+        hero3dElement.style.transform = 'rotateX(0) rotateY(0)'; 
+      });  hero3dWrapper.addEventListener('mouseleave', () => {
+    }ransform = 'rotateX(0) rotateY(0)';
     
     // Scroll indicator click
     const scrollIndicator = document.querySelector('.scroll-indicator');
     scrollIndicator?.addEventListener('click', () => {
-      window.scrollTo({
-        top: window.innerHeight,
-        behavior: 'smooth'
-      });
-    });
-  });
+      window.scrollTo({= document.querySelector('.scroll-indicator');
+        top: window.innerHeight,lIndicator?.addEventListener('click', () => {
+        behavior: 'smooth'indow.scrollTo({
+      });   top: window.innerHeight,
+    });ehavior: 'smooth'
+  });      });
 </script>
 
 <style>
   .hero-title {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.1;
-  }
+    font-family: 'Montserrat', sans-serif;yle>
+    line-height: 1.1;.hero-title {
+  }at', sans-serif;
   
   @keyframes arrowBounce {
     0%, 20%, 50%, 80%, 100% {
       transform: translateY(0) rotate(45deg);
+    }%, 20%, 50%, 80%, 100% {
+    40% { transform: translateY(10px) rotate(45deg);nsform: translateY(0) rotate(45deg);
     }
-    40% { transform: translateY(10px) rotate(45deg);
-    }
-    60% {
-      transform: translateY(5px) rotate(45deg);
-    }
-  }
+    60% {0% { transform: translateY(10px) rotate(45deg);
+      transform: translateY(5px) rotate(45deg); }
+    }  60% {
+  }teY(5px) rotate(45deg);
   
   .animate-arrowBounce {
+    animation: arrowBounce 2s infinite;
+
+
+</style>  }  .animate-arrowBounce {
     animation: arrowBounce 2s infinite;
   }
 </style>
