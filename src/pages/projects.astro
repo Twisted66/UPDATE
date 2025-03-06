@@ -1,0 +1,368 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Projects" 
+  description="Explore our portfolio of exceptional construction projects showcasing our expertise in residential, commercial, and sustainable building."
+>
+
+  <div class="fixed inset-0 -z-10 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+  <div class="container mx-auto">
+    <!-- Hero Section -->
+    <section class="projects-hero relative h-[400px] flex items-center justify-center overflow-hidden">
+      <div class="hero-background absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('/api/placeholder/1400/400');"></div>
+      <div class="hero-overlay absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent dark:from-gray-900 dark:via-gray-900/80"></div>
+      <div class="hero-content relative z-10 text-center max-w-3xl px-5">
+        <h1 class="projects-hero-title text-5xl font-bold mb-4 text-white dark:text-white">Our Projects</h1>
+        <p class="projects-hero-subtitle text-lg text-gray-300 dark:text-gray-300">
+          Showcasing our expertise through a diverse portfolio of exceptional construction projects
+        </p>
+      </div>
+    </section>
+
+    <!-- Project Categories -->
+    <section class="project-categories py-10 bg-white dark:bg-black">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-wrap justify-center gap-4">
+          <button class="category-btn active px-6 py-2 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-300">All Projects</button>
+          <button class="category-btn px-6 py-2 rounded-full bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-all duration-300">Residential</button>
+          <button class="category-btn px-6 py-2 rounded-full bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-all duration-300">Commercial</button>
+          <button class="category-btn px-6 py-2 rounded-full bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-all duration-300">Infrastructure</button>
+          <button class="category-btn px-6 py-2 rounded-full bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-all duration-300">Sustainable</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D Carousel Section -->
+    <section class="projects-3d-carousel py-20 bg-gradient-to-b from-gray-100 to-white dark:from-black/90 dark:to-black relative">
+      <div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(255,107,53,0.05)_0%,transparent_70%)]"></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-6 inline-block relative text-gray-900 dark:text-white">
+            Featured <span class="text-primary">Projects</span>
+            <span class="absolute bottom-0 left-1/2 w-24 h-1 bg-gradient-primary -translate-x-1/2 rounded-full"></span>
+          </h2>
+          <p class="text-xl max-w-3xl mx-auto text-gray-600 dark:text-gray-300">
+            Explore our showcase of exceptional construction projects
+          </p>
+        </div>
+
+        <div class="scene-container relative h-[500px] max-w-[800px] mx-auto perspective-[1000px]">
+          <div id="projectCarousel" class="carousel absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform-style-preserve-3d transition-transform duration-1000">
+            <!-- Project Cards -->
+            <div class="project-card-3d absolute top-1/2 left-1/2 w-[300px] h-[400px] bg-white dark:bg-white/5 rounded-xl overflow-hidden shadow-xl backdrop-blur-sm border border-gray-200 dark:border-white/10 transition-all duration-500" data-category="residential">
+              <img src="/api/placeholder/400/250" alt="Panorama Heights" class="project-image-3d w-full h-[200px] object-cover">
+              <div class="project-content-3d p-4">
+                <span class="project-category-3d inline-block px-3 py-1 bg-primary/20 text-primary text-xs rounded-full mb-3">Residential</span>
+                <h3 class="project-title-3d text-xl font-semibold mb-3 text-gray-900 dark:text-white">Panorama Heights Residence</h3>
+                <p class="project-description-3d text-sm leading-relaxed mb-4 text-gray-600 dark:text-gray-300">
+                  Luxury sustainable home with panoramic views and cutting-edge technology.
+                </p>
+                <a href="/project-detail" class="project-details-btn inline-flex items-center text-primary font-semibold text-sm no-underline transition-all duration-300 hover:text-accent">
+                  View Project <span class="arrow-icon ml-2 transition-transform duration-300">→</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-card-3d absolute top-1/2 left-1/2 w-[300px] h-[400px] bg-white dark:bg-white/5 rounded-xl overflow-hidden shadow-xl backdrop-blur-sm border border-gray-200 dark:border-white/10 transition-all duration-500" data-category="commercial">
+              <img src="/api/placeholder/400/250" alt="Skyline Office Tower" class="project-image-3d w-full h-[200px] object-cover">
+              <div class="project-content-3d p-4">
+                <span class="project-category-3d inline-block px-3 py-1 bg-primary/20 text-primary text-xs rounded-full mb-3">Commercial</span>
+                <h3 class="project-title-3d text-xl font-semibold mb-3 text-gray-900 dark:text-white">Skyline Office Tower</h3>
+                <p class="project-description-3d text-sm leading-relaxed mb-4 text-gray-600 dark:text-gray-300">
+                  Modern 20-story office building with sustainable design and smart technology.
+                </p>
+                <a href="/project-detail" class="project-details-btn inline-flex items-center text-primary font-semibold text-sm no-underline transition-all duration-300 hover:text-accent">
+                  View Project <span class="arrow-icon ml-2 transition-transform duration-300">→</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-card-3d absolute top-1/2 left-1/2 w-[300px] h-[400px] bg-white dark:bg-white/5 rounded-xl overflow-hidden shadow-xl backdrop-blur-sm border border-gray-200 dark:border-white/10 transition-all duration-500" data-category="infrastructure">
+              <img src="/api/placeholder/400/250" alt="Community Center" class="project-image-3d w-full h-[200px] object-cover">
+              <div class="project-content-3d p-4">
+                <span class="project-category-3d inline-block px-3 py-1 bg-primary/20 text-primary text-xs rounded-full mb-3">Infrastructure</span>
+                <h3 class="project-title-3d text-xl font-semibold mb-3 text-gray-900 dark:text-white">Riverfront Community Center</h3>
+                <p class="project-description-3d text-sm leading-relaxed mb-4 text-gray-600 dark:text-gray-300">
+                  Multi-purpose community facility with innovative design and green spaces.
+                </p>
+                <a href="/project-detail" class="project-details-btn inline-flex items-center text-primary font-semibold text-sm no-underline transition-all duration-300 hover:text-accent">
+                  View Project <span class="arrow-icon ml-2 transition-transform duration-300">→</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-card-3d absolute top-1/2 left-1/2 w-[300px] h-[400px] bg-white dark:bg-white/5 rounded-xl overflow-hidden shadow-xl backdrop-blur-sm border border-gray-200 dark:border-white/10 transition-all duration-500" data-category="sustainable">
+              <img src="/api/placeholder/400/250" alt="Eco Apartments" class="project-image-3d w-full h-[200px] object-cover">
+              <div class="project-content-3d p-4">
+                <span class="project-category-3d inline-block px-3 py-1 bg-primary/20 text-primary text-xs rounded-full mb-3">Sustainable</span>
+                <h3 class="project-title-3d text-xl font-semibold mb-3 text-gray-900 dark:text-white">EcoLiving Apartments</h3>
+                <p class="project-description-3d text-sm leading-relaxed mb-4 text-gray-600 dark:text-gray-300">
+                  Net-zero energy multi-family housing with innovative sustainable features.
+                </p>
+                <a href="/project-detail" class="project-details-btn inline-flex items-center text-primary font-semibold text-sm no-underline transition-all duration-300 hover:text-accent">
+                  View Project <span class="arrow-icon ml-2 transition-transform duration-300">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <div class="carousel-controls flex justify-center mt-8 gap-4">
+          <button id="prevBtn" class="carousel-btn w-12 h-12 rounded-full flex items-center justify-center bg-white dark:bg-white/5 border-2 border-primary text-primary hover:bg-primary hover:text-white dark:hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-black">
+            <span class="sr-only">Previous</span>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button id="nextBtn" class="carousel-btn w-12 h-12 rounded-full flex items-center justify-center bg-white dark:bg-white/5 border-2 border-primary text-primary hover:bg-primary hover:text-white dark:hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-black">
+            <span class="sr-only">Next</span>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Grid -->
+    <section class="project-grid py-20 bg-gray-50 dark:bg-black/50">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[1, 2, 3, 4, 5, 6].map((_, index) => (
+            <div class="project-card bg-white dark:bg-white/5 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2">
+              <div class="relative">
+                <img src={`/api/placeholder/600/400?text=Project${index + 1}`} alt={`Project ${index + 1}`} class="w-full h-48 object-cover" />
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 bg-primary text-white text-sm rounded-full">Commercial</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Project Name {index + 1}</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Brief description of the project and its key features.</p>
+                <a href="/project-detail" class="text-primary font-medium hover:text-accent transition-colors">Learn More →</a>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div class="text-center mt-12">
+          <button class="load-more px-8 py-3 bg-primary text-white rounded-full hover:bg-accent transition-colors">
+            Load More Projects
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-20 bg-gradient-primary text-white">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="stat-item text-center">
+            <div class="text-5xl font-bold mb-2">200+</div>
+            <div class="text-lg opacity-90">Projects Completed</div>
+          </div>
+          <div class="stat-item text-center">
+            <div class="text-5xl font-bold mb-2">15+</div>
+            <div class="text-lg opacity-90">Years Experience</div>
+          </div>
+          <div class="stat-item text-center">
+            <div class="text-5xl font-bold mb-2">50+</div>
+            <div class="text-lg opacity-90">Team Members</div>
+          </div>
+          <div class="stat-item text-center">
+            <div class="text-5xl font-bold mb-2">98%</div>
+            <div class="text-lg opacity-90">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="clients-section py-20 bg-white dark:bg-black">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Clients</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="client-card bg-gray-50 dark:bg-white/5 p-8 rounded-xl">
+            <div class="flex items-center mb-4">
+              <img src="/api/placeholder/60/60" alt="Client" class="w-5 h-5 rounded-full mr-4" />
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white">John Smith</h4>
+                <p class="text-gray-600 dark:text-gray-400">CEO, Tech Corp</p>
+              </div>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300">"Exceptional quality and professionalism throughout the entire project. The team's attention to detail and commitment to excellence exceeded our expectations."</p>
+          </div>
+          <div class="testimonial-card bg-gray-50 dark:bg-white/5 p-8 rounded-xl">
+            <div class="flex items-center mb-4">
+              <img src="/api/placeholder/60/60" alt="Client" class="w-12 h-12 rounded-full mr-4" />
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white">Sarah Johnson</h4>
+                <p class="text-gray-600 dark:text-gray-400">Director, Community Center</p>
+              </div>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300">"Working with Ultraction was a seamless experience. Their innovative approach and sustainable practices created a space that truly serves our community."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-20 bg-gradient-to-br from-primary to-accent text-white text-center">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+        <p class="text-xl mb-8 opacity-90">Let's discuss how we can bring your vision to life.</p>
+        <a href="/contact" class="inline-block px-8 py-3 bg-white text-primary rounded-full hover:bg-gray-100 transition-colors">
+          Contact Us Today
+        </a>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.getElementById('projectCarousel');
+    const cards = document.querySelectorAll('.project-card-3d');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const totalCards = cards.length;
+    const angleIncrement = 360 / totalCards;
+    let currentAngle = 0;
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      if (!carousel) return;
+      
+      carousel.style.transform = `translate(-50%, -50%) rotateY(${currentAngle}deg)`;
+      
+      cards.forEach((card, index) => {
+        const angle = angleIncrement * index;
+        const zDistance = 400; // Increased distance for better spacing
+        const radius = 500; // Radius of the carousel
+        
+        // Calculate position on the circle
+        const theta = (angle * Math.PI) / 180;
+        const x = Math.sin(theta) * radius;
+        const z = Math.cos(theta) * radius;
+        
+        // Apply transform with new positioning
+        card.style.transform = `
+          translate(-50%, -50%)
+          translateX(${x}px)
+          translateZ(${-z}px)
+          rotateY(${angle}deg)
+        `;
+        
+        // Update visibility and active state
+        const isActive = index === currentIndex;
+        card.classList.toggle('active', isActive);
+        card.style.opacity = isActive ? '1' : '0.3';
+        card.style.zIndex = isActive ? '1' : '0';
+      });
+    }
+
+    // Navigation handlers
+    nextBtn?.addEventListener('click', () => {
+      currentAngle -= angleIncrement;
+      currentIndex = (currentIndex + 1) % totalCards;
+      updateCarousel();
+    });
+
+    prevBtn?.addEventListener('click', () => {
+      currentAngle += angleIncrement;
+      currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+      updateCarousel();
+    });
+
+    // Initialize carousel
+    updateCarousel();
+
+    // Add touch support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    document.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    document.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const swipeDistance = touchEndX - touchStartX;
+      
+      if (Math.abs(swipeDistance) > swipeThreshold) {
+        if (swipeDistance > 0) {
+          // Swipe right - show previous
+          prevBtn?.click();
+        } else {
+          // Swipe left - show next
+          nextBtn?.click();
+        }
+      }
+    }
+
+    // Category filtering
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        categoryButtons.forEach(btn => btn.classList.remove('active', 'bg-primary', 'text-white'));
+        
+        // Add active class to clicked button
+        button.classList.add('active', 'bg-primary', 'text-white');
+      });
+    });
+  });
+</script>
+
+<style>
+  .scene-container {
+    perspective: 2000px;
+  }
+
+  .project-card-3d {
+    transition: all 0.5s ease-out;
+    transform-origin: center center;
+  }
+
+  .project-card-3d.active {
+    transform: translate(-50%, -50%) scale(1.1) !important;
+    z-index: 2;
+  }
+
+  .carousel-btn {
+    transform: scale(1);
+    transition: all 0.3s ease;
+  }
+
+  .carousel-btn:hover {
+    transform: scale(1.1);
+  }
+
+  .carousel-btn:active {
+    transform: scale(0.95);
+  }
+
+  .category-btn.active {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .scene-container {
+      height: 400px;
+    }
+
+    .project-card-3d {
+      width: 260px;
+      height: 360px;
+    }
+  }
+</style>

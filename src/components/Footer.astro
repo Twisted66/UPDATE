@@ -1,0 +1,81 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-black/30 pt-20 pb-8 relative z-10">
+  <div class="footer-content flex justify-between flex-wrap max-w-7xl mx-auto px-5">
+    <div class="footer-column flex-1 min-w-[250px] mb-10 px-5">
+      <div class="footer-logo">
+        <img src="/logo.png" alt="Ultraction Logo" class="h-[60px] mb-5">
+      </div>
+      <p class="footer-about mt-5 leading-relaxed text-gray-300">
+        Building excellence since 2008. Ultraction General Contracting delivers innovative construction solutions with uncompromising quality and integrity.
+      </p>
+      <div class="social-links flex mt-6">
+        <a href="#" class="flex items-center justify-center w-10 h-10 bg-white/5 rounded-full mr-3 transition-all duration-300 hover:transform hover:-translate-y-1 hover:bg-primary">
+          <i class="fab fa-facebook-f text-white text-lg"></i>
+        </a>
+        <a href="#" class="flex items-center justify-center w-10 h-10 bg-white/5 rounded-full mr-3 transition-all duration-300 hover:transform hover:-translate-y-1 hover:bg-primary">
+          <i class="fab fa-twitter text-white text-lg"></i>
+        </a>
+        <a href="#" class="flex items-center justify-center w-10 h-10 bg-white/5 rounded-full mr-3 transition-all duration-300 hover:transform hover:-translate-y-1 hover:bg-primary">
+          <i class="fab fa-instagram text-white text-lg"></i>
+        </a>
+        <a href="#" class="flex items-center justify-center w-10 h-10 bg-white/5 rounded-full mr-3 transition-all duration-300 hover:transform hover:-translate-y-1 hover:bg-primary">
+          <i class="fab fa-linkedin-in text-white text-lg"></i>
+        </a>
+      </div>
+    </div>
+    
+    <div class="footer-column flex-1 min-w-[250px] mb-10 px-5">
+      <h3 class="font-montserrat text-xl font-semibold mb-6 text-primary relative inline-block after:content-[''] after:absolute after:w-10 after:h-[3px] after:bg-gradient-primary after:bottom-[-10px] after:left-0 after:rounded-md">Quick Links</h3>
+      <ul class="footer-links list-none">
+        <li class="mb-4"><a href="/" class="text-white no-underline text-gray-300 transition-all duration-300 hover:text-primary">Home</a></li>
+        <li class="mb-4"><a href="/services" class="text-white no-underline text-gray-300 transition-all duration-300 hover:text-primary">Services</a></li>
+        <li class="mb-4"><a href="/projects" class="text-white no-underline text-gray-300 transition-all duration-300 hover:text-primary">Our Projects</a></li>
+        <li class="mb-4"><a href="/about" class="text-white no-underline text-gray-300 transition-all duration-300 hover:text-primary">About Us</a></li>
+        <li class="mb-4"><a href="/contact" class="text-white no-underline text-gray-300 transition-all duration-300 hover:text-primary">Contact Us</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column flex-1 min-w-[250px] mb-10 px-5">
+      <h3 class="font-montserrat text-xl font-semibold mb-6 text-primary relative inline-block after:content-[''] after:absolute after:w-10 after:h-[3px] after:bg-gradient-primary after:bottom-[-10px] after:left-0 after:rounded-md">Our Services</h3>
+      <ul class="footer-links list-none">
+        <li class="mb-4"><a href="/services#residential" class="text-white no-underline text-gray-300 transition-all duration-300 hover:text-primary">Residential Construction</a></li>
+        <li class="mb-4"><a href="/services#commercial" class="text-white no-underline text-gray-300 transition-all duration-300 hover:text-primary">Commercial Building</a></li>
+        <li class="mb-4"><a href="/services#renovation" class="text-white no-underline text-gray-300 transition-all duration-300 hover:text-primary">Renovation & Remodeling</a></li>
+        <li class="mb-4"><a href="/services#sustainable" class="text-white no-underline text-gray-300 transition-all duration-300 hover:text-primary">Sustainable Building</a></li>
+        <li class="mb-4"><a href="/services#design" class="text-white no-underline text-gray-300 transition-all duration-300 hover:text-primary">Design-Build Services</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column footer-contact flex-1 min-w-[250px] mb-10 px-5">
+      <h3 class="font-montserrat text-xl font-semibold mb-6 text-primary relative inline-block after:content-[''] after:absolute after:w-10 after:h-[3px] after:bg-gradient-primary after:bottom-[-10px] after:left-0 after:rounded-md">Contact Us</h3>
+      <p class="mb-4 flex items-start text-gray-300"><i class="fas fa-map-marker-alt mr-4 text-primary"></i> 123 Construction Way, Building City, BC 12345</p>
+      <p class="mb-4 flex items-start text-gray-300"><i class="fas fa-phone-alt mr-4 text-primary"></i> (555) 123-4567</p>
+      <p class="mb-4 flex items-start text-gray-300"><i class="fas fa-envelope mr-4 text-primary"></i> info@ultraction.com</p>
+      <p class="mb-4 flex items-start text-gray-300"><i class="fas fa-clock mr-4 text-primary"></i> Mon-Fri: 8am - 6pm</p>
+    </div>
+  </div>
+  
+  <div class="footer-bottom text-center pt-8 mt-8 border-t border-white/10 max-w-7xl mx-auto px-5">
+    <p class="copyright text-sm text-gray-400">© {currentYear} Ultraction General Contracting. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    transition: width 0.3s ease;
+  }
+  
+  .footer-links a:hover::after {
+    width: 100%;
+  }
+</style>

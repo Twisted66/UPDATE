@@ -1,0 +1,403 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+  
+  <main>
+    <section class="hero min-h-screen flex items-center px-12 py-12 relative bg-gradient-to-br from-black/80 via-gray-900 to-black">
+      <div class="absolute inset-0 z-0">
+        <div class="bg-[radial-gradient(circle_at_30%_30%,rgba(255,107,53,0.1)_0%,transparent_70%)] absolute inset-0"></div>
+        <div class="bg-[radial-gradient(circle_at_70%_70%,rgba(255,107,53,0.1)_0%,transparent_70%)] absolute inset-0"></div>
+      </div>
+      
+      <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Content -->
+        <div class="hero-content z-10 opacity-0 transform translate-y-12 transition-all duration-1000" id="heroContent">
+          <h1 class="hero-title text-6xl font-bold leading-tight mb-8">
+            Building <span class="block text-gradient-primary">the Future</span> with Integrity
+          </h1>
+          <p class="hero-description text-lg leading-relaxed mb-10 text-gray-300 max-w-lg">
+            Ultraction General Contracting leads the industry in civil construction, delivering projects with precision, innovation, and a commitment to sustainability. From infrastructure to buildings, we turn your vision into reality with integrity.
+          </p>
+          <a href="/contact" class="cta-button inline-block px-10 py-4 bg-gradient-primary text-white no-underline font-semibold rounded transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/30">Get a Quote</a>
+          
+          <div class="stats flex justify-between mt-12 max-w-lg">
+            <div class="stat-item text-center">
+              <div class="stat-number text-4xl font-bold text-primary mb-1">5+</div>
+              <div class="stat-label text-sm text-gray-400">Years Experience</div>
+            </div>
+            <div class="stat-item text-center">
+              <div class="stat-number text-4xl font-bold text-primary mb-1">200+</div>
+              <div class="stat-label text-sm text-gray-400">Projects Completed</div>
+            </div>
+            <div class="stat-item text-center">
+              <div class="stat-number text-4xl font-bold text-primary mb-1">100%</div>
+              <div class="stat-label text-sm text-gray-400">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content - 3D Image Animation -->
+        <div class="hero-3d-container relative z-10 opacity-0 transform translate-y-12 transition-all duration-1000 delay-300" id="hero3dContent">
+          <div class="hero-3d-wrapper relative w-full h-[600px] perspective-[1000px]">
+            <div class="hero-3d-element absolute inset-0 transform-style-preserve-3d animate-float">
+              <!-- Front Image -->
+              <div class="absolute inset-0 transform translate-z-[150px]">
+                <div class="w-full h-full bg-white/5 rounded-2xl overflow-hidden backdrop-blur-sm border border-white/10">
+                  <img src="/api/placeholder/800/600" alt="Building Project" class="w-full h-full object-cover opacity-80">
+                </div>
+              </div>
+              
+              <!-- Middle Image -->
+              <div class="absolute inset-0 transform translate-z-[50px] scale-[0.9]">
+                <div class="w-full h-full bg-white/5 rounded-2xl overflow-hidden backdrop-blur-sm border border-white/10">
+                  <img src="/api/placeholder/800/600" alt="Construction Site" class="w-full h-full object-cover opacity-60">
+                </div>
+              </div>
+              
+              <!-- Back Image -->
+              <div class="absolute inset-0 transform translate-z-[-50px] scale-[0.8]">
+                <div class="w-full h-full bg-white/5 rounded-2xl overflow-hidden backdrop-blur-sm border border-white/10">
+                  <img src="/api/placeholder/800/600" alt="Architecture Design" class="w-full h-full object-cover opacity-40">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-gray-400 transition-opacity duration-300 cursor-pointer hover:text-primary">
+        <p class="mb-2 text-sm uppercase tracking-widest">Scroll Down</p>
+        <div class="scroll-arrow w-8 h-8 border-r-2 border-b-2 border-primary transform rotate-45 animate-arrowBounce"></div>
+      </div>
+    </section>
+    
+    <section class="services-overview py-24 bg-gradient-to-t from-black to-black/90 relative">
+      <div class="absolute inset-0 z-0">
+        <div class="bg-[radial-gradient(circle_at_center,rgba(255,107,53,0.05)_0%,transparent_70%)] absolute inset-0"></div>
+      </div>
+      
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-6 inline-block relative">
+            Our <span class="text-primary">Services</span>
+            <span class="absolute bottom-0 left-1/2 w-24 h-1 bg-gradient-primary -translate-x-1/2 rounded-full"></span>
+          </h2>
+          <p class="text-xl max-w-3xl mx-auto text-gray-300">
+            Comprehensive construction solutions tailored to your specific needs
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="service-card bg-white/5 rounded-xl p-8 backdrop-blur-sm border border-white/5 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg">
+            <div class="service-icon w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-primary mb-4">Infrastructure and Transportation</h3>
+            <p class="leading-relaxed text-gray-300">
+              Specializing in bridges, underpasses, and water management systems, we deliver critical infrastructure that connects communities and supports growth.
+            </p>
+            <a href="/services#infrastructure" class="inline-block mt-6 text-primary font-medium hover:text-accent transition-colors">Learn More →</a>
+          </div>
+          
+          <div class="service-card bg-white/5 rounded-xl p-8 backdrop-blur-sm border border-white/5 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg">
+            <div class="service-icon w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-primary mb-4">Building Construction</h3>
+            <p class="leading-relaxed text-gray-300">
+              Delivering industrial, commercial, and residential projects with precision and innovative design, tailored to your specific needs.
+            </p>
+            <a href="/services#building" class="inline-block mt-6 text-primary font-medium hover:text-accent transition-colors">Learn More →</a>
+          </div>
+          
+          <div class="service-card bg-white/5 rounded-xl p-8 backdrop-blur-sm border border-white/5 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg">
+            <div class="service-icon w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-primary mb-4">Sustainable Solutions</h3>
+            <p class="leading-relaxed text-gray-300">
+              Implementing eco-friendly practices and cutting-edge technology to create energy-efficient projects that benefit both clients and the environment.
+            </p>
+            <a href="/services#sustainable" class="inline-block mt-6 text-primary font-medium hover:text-accent transition-colors">Learn More →</a>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="/services" class="inline-block px-8 py-3 border-2 border-primary text-primary font-semibold rounded transition-all duration-300 hover:bg-primary hover:text-black">View All Services</a>
+        </div>
+      </div>
+    </section>
+    
+    <section class="major-projects py-24 bg-gradient-to-r from-black to-black/90 relative">
+      <div class="absolute inset-0 z-0">
+        <div class="bg-[radial-gradient(circle_at_70%_30%,rgba(255,107,53,0.1)_0%,transparent_70%)] absolute inset-0"></div>
+      </div>
+      
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-6 inline-block relative">
+            Major <span class="text-primary">Projects</span>
+            <span class="absolute bottom-0 left-1/2 w-24 h-1 bg-gradient-primary -translate-x-1/2 rounded-full"></span>
+          </h2>
+          <p class="text-xl max-w-3xl mx-auto text-gray-300">
+            Explore our portfolio of exceptional construction projects
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="project-card relative h-[400px] rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:transform hover:-translate-y-3 hover:shadow-2xl group">
+            <img src="/api/placeholder/600/800" alt="Residential project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-90"></div>
+            <div class="project-content absolute bottom-0 left-0 w-full p-6 transform translate-y-4 transition-all duration-300 group-hover:translate-y-0">
+              <span class="project-category inline-block px-3 py-1 bg-primary text-black text-xs rounded-full mb-2">Infastructure</span>
+              <h3 class="project-title text-xl font-semibold text-white mb-2">Etihad Rail 2d Project</h3>
+              <p class="project-description text-sm text-gray-300 mb-4 opacity-0 max-h-0 transition-all duration-300 group-hover:opacity-100 group-hover:max-h-20">
+                Luxury sustainable home with panoramic views and cutting-edge technology.
+              </p>
+              <a href="/project-detail" class="text-primary font-medium hover:text-accent transition-colors">View Project →</a>
+            </div>
+          </div>
+          
+          <div class="project-card relative h-[400px] rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:transform hover:-translate-y-3 hover:shadow-2xl group">
+            <img src="/api/placeholder/600/800" alt="Commercial project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-90"></div>
+            <div class="project-content absolute bottom-0 left-0 w-full p-6 transform translate-y-4 transition-all duration-300 group-hover:translate-y-0">
+              <span class="project-category inline-block px-3 py-1 bg-primary text-black text-xs rounded-full mb-2">Commercial</span>
+              <h3 class="project-title text-xl font-semibold text-white mb-2">MBR Dubai Hills Estate</h3>
+              <p class="project-description text-sm text-gray-300 mb-4 opacity-0 max-h-0 transition-all duration-300 group-hover:opacity-100 group-hover:max-h-20">
+                Modern 20-story office building with sustainable design and smart technology.
+              </p>
+              <a href="/projects" class="text-primary font-medium hover:text-accent transition-colors">View Project →</a>
+            </div>
+          </div>
+          
+          <div class="project-card relative h-[400px] rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:transform hover:-translate-y-3 hover:shadow-2xl group">
+            <img src="/api/placeholder/600/800" alt="Infrastructure project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-90"></div>
+            <div class="project-content absolute bottom-0 left-0 w-full p-6 transform translate-y-4 transition-all duration-300 group-hover:translate-y-0">
+              <span class="project-category inline-block px-3 py-1 bg-primary text-black text-xs rounded-full mb-2">Industrial and Freight Infrastructure</span>
+              <h3 class="project-title text-xl font-semibold text-white mb-2">Construction of Freight Facilities, Buildings and Utilities</h3>
+              <p class="project-description text-sm text-gray-300 mb-4 opacity-0 max-h-0 transition-all duration-300 group-hover:opacity-100 group-hover:max-h-20">
+                Multi-purpose community facility with innovative design and green spaces.
+              </p>
+              <a href="/projects" class="text-primary font-medium hover:text-accent transition-colors">View Project →</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="/projects" class="inline-block px-8 py-3 border-2 border-primary text-primary font-semibold rounded transition-all duration-300 hover:bg-primary hover:text-black">View All Projects</a>
+        </div>
+      </div>
+    </section>
+    
+    <section class="why-choose-us py-24 bg-gradient-to-br from-black/80 via-gray-900 to-black relative">
+      <div class="absolute inset-0 z-0">
+        <div class="bg-[radial-gradient(circle_at_30%_70%,rgba(255,107,53,0.1)_0%,transparent_70%)] absolute inset-0"></div>
+      </div>
+      
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-6 inline-block relative">
+            Why Choose <span class="text-primary">Ultraction</span>
+            <span class="absolute bottom-0 left-1/2 w-24 h-1 bg-gradient-primary -translate-x-1/2 rounded-full"></span>
+          </h2>
+          <p class="text-xl max-w-3xl mx-auto text-gray-300">
+            What sets us apart in the construction industry
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="feature-card bg-white/5 rounded-xl p-8 backdrop-blur-sm border border-white/5 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg text-center">
+            <div class="feature-icon w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-primary mb-4">Quality Craftsmanship</h3>
+            <p class="text-gray-300">
+              Uncompromising attention to detail and superior workmanship in every project.
+            </p>
+          </div>
+          
+          <div class="feature-card bg-white/5 rounded-xl p-8 backdrop-blur-sm border border-white/5 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg text-center">
+            <div class="feature-icon w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-primary mb-4">On-Time Delivery</h3>
+            <p class="text-gray-300">
+              Consistent project completion within agreed timelines through efficient planning.
+            </p>
+          </div>
+          
+          <div class="feature-card bg-white/5 rounded-xl p-8 backdrop-blur-sm border border-white/5 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg text-center">
+            <div class="feature-icon w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-primary mb-4">Innovative Solutions</h3>
+            <p class="text-gray-300">
+              Cutting-edge approaches to construction challenges and design implementation.
+            </p>
+          </div>
+          
+          <div class="feature-card bg-white/5 rounded-xl p-8 backdrop-blur-sm border border-white/5 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg text-center">
+            <div class="feature-icon w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-primary mb-4">Expert Team</h3>
+            <p class="text-gray-300">
+              Highly skilled professionals with extensive experience in all aspects of construction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="clients py-24 bg-gradient-to-t from-black to-black/90 relative">
+      <div class="absolute inset-0 z-0">
+        <div class="bg-[radial-gradient(circle_at_center,rgba(255,107,53,0.05)_0%,transparent_70%)] absolute inset-0"></div>
+      </div>
+      
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-6 inline-block relative">
+            Clients and <span class="text-primary">Prequalifications</span>
+            <span class="absolute bottom-0 left-1/2 w-24 h-1 bg-gradient-primary -translate-x-1/2 rounded-full"></span>
+          </h2>
+          <p class="text-xl max-w-3xl mx-auto text-gray-300">
+            Trusted by leading organizations and prequalified for excellence in construction
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-10">
+          <div class="clients-card bg-white/5 rounded-xl p-8 backdrop-blur-md border border-white/10 transition-all duration-300 hover:transform hover:-translate-y-3 hover:shadow-xl relative">
+            <div class="quote-icon absolute top-6 right-6 text-primary/20 text-6xl">"</div>
+            <p class="clients-text text-lg leading-relaxed mb-6 relative z-10 text-gray-300">
+            </p>
+            <div class="testimonial-author flex items-center">
+              <img src="/api/placeholder/60/60" alt="Client" class="w-14 h-14 rounded-full object-cover mr-4">
+              <div>
+                <h4 class="font-semibold text-primary">Trojan</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card bg-white/5 rounded-xl p- backdrop-blur-md border border-white/10 transition-all duration-300 hover:transform hover:-translate-y-3 hover:shadow-xl relative">
+            <div class="quote-icon absolute top-6 right-6 text-primary/20 text-6xl">"</div>
+            <p class="testimonial-text text-lg leading-relaxed mb-6 relative z-10 text-gray-300">
+              Working with Ultraction on our community center project was a seamless experience from concept to completion. Their innovative approach to sustainable building practices resulted in a facility that not only serves our community beautifully but also operates with minimal environmental impact.
+            </p>
+            <div class="testimonial-author flex items-center">
+              <img src="/api/placeholder/60/60" alt="Client" class="w-14 h-14 rounded-full object-cover mr-4">
+              <div>
+                <h4 class="font-semibold text-primary">Marcus Johnson</h4>
+                <p class="text-sm text-gray-400">Director, Oakridge Community Foundation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="cta-section py-24 text-center bg-gradient-to-br from-black/80 to-black relative">
+      <div class="absolute inset-0 z-0">
+        <div class="bg-[radial-gradient(circle_at_center,rgba(255,107,53,0.1)_0%,transparent_70%)] absolute inset-0"></div>
+      </div>
+      
+      <div class="max-w-4xl mx-auto px-6 relative z-10">
+        <h2 class="text-4xl font-bold mb-6">Ready to Build Your Vision?</h2>
+        <p class="text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
+          Let's discuss how Ultraction's expertise, innovation, and commitment to excellence can bring your construction project to life.
+        </p>
+        <a href="/contact" class="cta-button inline-block px-10 py-4 bg-gradient-primary text-white no-underline font-semibold rounded transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/30">Contact Us Today</a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Hero content animation
+    const heroContent = document.getElementById('heroContent');
+    const hero3dContent = document.getElementById('hero3dContent');
+    
+    if (heroContent && hero3dContent) {
+      setTimeout(() => {
+        heroContent.classList.add('opacity-100', 'translate-y-0');
+        hero3dContent.classList.add('opacity-100', 'translate-y-0');
+      }, 500);
+    }
+    
+    // 3D Animation with mouse movement
+    const hero3dElement = document.querySelector('.hero-3d-element');
+    const hero3dWrapper = document.querySelector('.hero-3d-wrapper');
+    
+    if (hero3dWrapper && hero3dElement) {
+      hero3dWrapper.addEventListener('mousemove', (e) => {
+        const rect = hero3dWrapper.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const mouseX = e.clientX - centerX;
+        const mouseY = e.clientY - centerY;
+        
+        const rotateX = (mouseY / rect.height) * 20;
+        const rotateY = (mouseX / rect.width) * 20;
+        
+        hero3dElement.style.transform = `
+          rotateX(${-rotateX}deg)
+          rotateY(${rotateY}deg)
+          translateZ(50px)
+        `;
+      });
+      
+      hero3dWrapper.addEventListener('mouseleave', () => {
+        hero3dElement.style.transform = 'rotateX(0) rotateY(0) translateZ(50px)';
+      });
+    }
+    
+    // Scroll indicator click
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    scrollIndicator?.addEventListener('click', () => {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+<style>
+  .hero-title {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.1;
+  }
+  
+  @keyframes arrowBounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0) rotate(45deg);
+    }
+    40% { transform: translateY(10px) rotate(45deg);
+    }
+    60% {
+      transform: translateY(5px) rotate(45deg);
+    }
+  }
+  
+  .animate-arrowBounce {
+    animation: arrowBounce 2s infinite;
+  }
+</style>

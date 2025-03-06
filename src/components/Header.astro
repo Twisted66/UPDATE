@@ -1,0 +1,126 @@
+---
+const navLinks = [
+  { href: "/", text: "Home" },
+  { href: "/services", text: "Services" },
+  { href: "/projects", text: "Projects" },
+  { href: "/about", text: "About" },
+  { href: "/contact", text: "Contact" }
+];
+---
+
+<header id="header" class="px-10 py-5 flex justify-between items-center fixed top-0 left-0 w-full z-[1000] transition-all duration-500 backdrop-blur-md bg-black/80">
+  <div class="logo flex items-center">
+    <img src="/public/logo/ULTRACTIONHEADER.png" alt="Ultraction Logo" class="h-12 transition-all duration-300">
+    <div class="logo-text ml-4">
+    </div>
+  </div>
+  
+  <div class="hamburger hidden cursor-pointer z-[1001] md:hidden">
+    <div class="line w-[30px] h-[3px] bg-white my-[6px] transition-all duration-400"></div>
+    <div class="line w-[30px] h-[3px] bg-white my-[6px] transition-all duration-400"></div>
+    <div class="line w-[30px] h-[3px] bg-white my-[6px] transition-all duration-400"></div>
+  </div>
+  
+  <ul class="nav-links flex list-none">
+    {navLinks.map(link => (
+      <li class="ml-10 relative">
+        <a 
+          href={link.href} 
+          class="text-white no-underline font-medium text-base transition-all duration-300 relative py-[5px] hover:text-primary"
+        >
+          {link.text}
+        </a>
+      </li>
+    ))}
+  </ul>
+</header>
+
+<script>
+  // Header scroll effect
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header?.classList.add('scrolled', 'py-4');
+    } else {
+      header?.classList.remove('scrolled', 'py-4');
+    }
+  });
+
+  // Mobile menu toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  
+  hamburger?.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks?.classList.toggle('active');
+  });
+</script>
+
+<style>
+  .scrolled {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .scrolled .logo img {
+    height: 35px;
+  }
+  
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links li a:hover::after {
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 80%;
+      max-width: 300px;
+      background: rgba(0, 0, 0, 0.95);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+    
+    .nav-links.active {
+      right: 0;
+    }
+    
+    .nav-links li {
+      margin: 20px 0;
+    }
+    
+    .hamburger {
+      display: block;
+    }
+    
+    .hamburger.active .line:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    
+    .hamburger.active .line:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .hamburger.active .line:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+</style>

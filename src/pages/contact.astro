@@ -1,0 +1,115 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Contact Us" 
+  description="Get in touch with Ultraction General Contracting to discuss your construction needs and how we can help bring your vision to life."
+>
+  <div class="container mx-auto">
+    <section class="contact-hero py-20 text-center bg-gradient-to-br from-black/80 via-gray-900 to-black relative">
+      <div class="absolute inset-0 z-0">
+        <div class="bg-[radial-gradient(circle_at_center,rgba(255,107,53,0.1)_0%,transparent_70%)] absolute inset-0"></div>
+      </div>
+      
+      <div class="relative z-10">
+        <h1 class="text-5xl font-bold mb-5">Get In <span class="text-primary">Touch</span></h1>
+        <p class="max-w-2xl mx-auto text-lg text-gray-300">
+          We're ready to transform your construction vision into reality. Reach out to us today to discuss your project needs and how Ultraction can deliver excellence.
+        </p>
+      </div>
+    </section>
+    
+    <div class="contact-container flex flex-wrap py-10 px-5 gap-8 bg-gradient-to-t from-black to-black/90 relative">
+      <div class="absolute inset-0 z-0">
+        <div class="bg-[radial-gradient(circle_at_30%_70%,rgba(255,107,53,0.05)_0%,transparent_70%)] absolute inset-0"></div>
+      </div>
+      
+      <div class="contact-form flex-1 min-w-[300px] bg-white/5 p-8 rounded-lg backdrop-blur-md border border-white/10 relative z-10">
+        <h2 class="text-3xl font-bold mb-6 text-white">Send Us a Message</h2>
+        <form>
+          <div class="form-group mb-5">
+            <label for="name" class="block mb-2 text-gray-300">Full Name</label>
+            <input type="text" id="name" required class="w-full p-3 bg-black/30 border border-white/20 text-white rounded focus:outline-none focus:border-primary">
+          </div>
+          <div class="form-group mb-5">
+            <label for="email" class="block mb-2 text-gray-300">Email Address</label>
+            <input type="email" id="email" required class="w-full p-3 bg-black/30 border border-white/20 text-white rounded focus:outline-none focus:border-primary">
+          </div>
+          <div class="form-group mb-5">
+            <label for="phone" class="block mb-2 text-gray-300">Phone Number</label>
+            <input type="tel" id="phone" class="w-full p-3 bg-black/30 border border-white/20 text-white rounded focus:outline-none focus:border-primary">
+          </div>
+          <div class="form-group mb-5">
+            <label for="subject" class="block mb-2 text-gray-300">Subject</label>
+            <input type="text" id="subject" class="w-full p-3 bg-black/30 border border-white/20 text-white rounded focus:outline-none focus:border-primary">
+          </div>
+          <div class="form-group mb-5">
+            <label for="message" class="block mb-2 text-gray-300">Your Message</label>
+            <textarea id="message" required class="w-full p-3 bg-black/30 border border-white/20 text-white rounded h-36 resize-vertical focus:outline-none focus:border-primary"></textarea>
+          </div>
+          <button type="submit" class="bg-gradient-primary text-white border-none py-3 px-6 font-bold rounded cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:transform hover:-translate-y-1">Submit Message</button>
+        </form>
+      </div>
+      
+      <div class="contact-info flex-1 min-w-[300px] relative z-10">
+        <div class="info-card bg-white/5 p-8 rounded-lg backdrop-blur-md border border-white/10 mb-8">
+          <h3 class="text-xl font-semibold mb-4 text-primary">Contact Information</h3>
+          <div class="info-item flex mb-4">
+            <span class="mr-4 text-primary">📍</span>
+            <div>
+              <h4 class="font-medium text-white">Address</h4>
+              <p class="text-gray-300">123 Construction Avenue, Suite 400<br>Building District, CA 90210</p>
+            </div>
+          </div>
+          <div class="info-item flex mb-4">
+            <span class="mr-4 text-primary">📞</span>
+            <div>
+              <h4 class="font-medium text-white">Phone</h4>
+              <p class="text-gray-300">(555) 123-4567</p>
+            </div>
+          </div>
+          <div class="info-item flex mb-4">
+            <span class="mr-4 text-primary">✉️</span>
+            <div>
+              <h4 class="font-medium text-white">Email</h4>
+              <p class="text-gray-300">info@ultraction.com</p>
+            </div>
+          </div>
+          <div class="info-item flex mb-4">
+            <span class="mr-4 text-primary">🕒</span>
+            <div>
+              <h4 class="font-medium text-white">Working Hours</h4>
+              <p class="text-gray-300">Monday-Friday: 8am - 6pm<br>Saturday: 9am - 2pm</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="info-card bg-white/5 p-8 rounded-lg backdrop-blur-md border border-white/10">
+          <h3 class="text-xl font-semibold mb-4 text-primary">Emergency Service</h3>
+          <p class="mb-4 text-gray-300">For urgent construction matters requiring immediate attention, please contact our 24/7 emergency line.</p>
+          <div class="info-item flex">
+            <span class="mr-4 text-primary">🚨</span>
+            <div>
+              <h4 class="font-medium text-white">Emergency Hotline</h4>
+              <p class="text-gray-300">(555) 911-BLDG</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <section class="map-container py-10 px-5 bg-gradient-to-b from-black/90 to-black relative">
+      <div class="absolute inset-0 z-0">
+        <div class="bg-[radial-gradient(circle_at_70%_30%,rgba(255,107,53,0.05)_0%,transparent_70%)] absolute inset-0"></div>
+      </div>
+      
+      <div class="relative z-10">
+        <h2 class="text-3xl font-bold mb-8 text-center text-white">Find Us</h2>
+        <div class="map h-96 rounded-lg overflow-hidden">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7152203584424!2d-118.39!3d34.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDAzJzAwLjAiTiAxMTjCsDIzJzI0LjAiVw!5e0!3m2!1sen!2sus!4v1635787570653!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

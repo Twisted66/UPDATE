@@ -1,0 +1,585 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Services" 
+  description="Explore our comprehensive construction services tailored to your specific needs, from residential and commercial construction to sustainable building solutions."
+>
+  
+    <div class="fixed inset-0 -z-10 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+    <div class="container mx-auto">
+    <!-- Page Header Section -->
+    <div class="container mx-auto relative z-10">
+    <section class="page-header relative h-[400px] flex items-center justify-center overflow-hidden">
+      <div class="header-content relative z-10 text-center max-w-3xl px-5">
+        <h1 class="header-title text-5xl font-bold mb-4 text-white">Our <span class="text-primary">Services</span></h1>
+        <p class="header-subtitle text-lg text-gray-300">Comprehensive construction solutions tailored to your specific needs</p>
+      </div>
+    </section>
+    
+    <!-- Introduction Section -->
+    <section class="introduction py-16">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-xl leading-relaxed text-gray-300">
+            At Ultraction General Contracting, we offer a comprehensive range of construction services designed to meet the diverse needs of our clients. From residential and commercial construction to specialized services like sustainable building and infrastructure development, our experienced team delivers excellence at every stage of the project lifecycle.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Services Carousel Section -->
+    <section class="services-carousel py-20 relative">
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-6 inline-block relative">
+            Our <span class="text-primary">Services</span>
+            <span class="absolute bottom-0 left-1/2 w-24 h-1 bg-gradient-primary -translate-x-1/2 rounded-full"></span>
+          </h2>
+          <p class="text-xl max-w-3xl mx-auto text-gray-300">
+            Explore our range of specialized construction services
+          </p>
+        </div>
+        
+        <div class="services-tabs flex flex-wrap justify-center gap-4 mb-10">
+          <button class="service-tab active px-6 py-3 rounded-full text-white font-medium transition-all duration-300 hover:text-primary" data-tab="residential">Residential</button>
+          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium transition-all duration-300 hover:text-primary" data-tab="commercial">Commercial</button>
+          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium transition-all duration-300 hover:text-primary" data-tab="sustainable">Sustainable</button>
+          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium transition-all duration-300 hover:text-primary" data-tab="renovation">Renovation</button>
+          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium transition-all duration-300 hover:text-primary" data-tab="design">Design-Build</button>
+        </div>
+        
+        <div class="services-content relative min-h-[500px]">
+          <!-- Residential Panel -->
+          <div class="service-panel active absolute w-full transition-all duration-500 opacity-100 transform translate-x-0" id="residential-panel">
+            <div class="service-content flex flex-col lg:flex-row items-center gap-16">
+              <div class="service-image w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl">
+                <img src="/api/placeholder/800/600" alt="Residential Construction" class="w-full h-auto">
+              </div>
+              <div class="service-details w-full lg:w-1/2">
+                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Residential</span>
+                <h2 class="text-3xl font-bold mb-6 text-white">Residential Construction</h2>
+                <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                  We create beautiful, functional homes that reflect your lifestyle and meet your unique needs. Our residential construction services encompass everything from custom home building to comprehensive renovations, all delivered with meticulous attention to detail and quality craftsmanship.
+                </p>
+                <ul class="service-features grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Custom Home Building</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Home Renovations</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Luxury Residential Projects</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Multi-Family Developments</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Additions & Extensions</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Interior Remodeling</span></li>
+                </ul>
+                <a href="/contact" class="inline-block px-8 py-3 bg-gradient-primary text-white font-semibold rounded transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:transform hover:-translate-y-1">Request a Consultation</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Commercial Panel -->
+          <div class="service-panel absolute w-full transition-all duration-500 opacity-0 transform translate-x-full" id="commercial-panel">
+            <div class="service-content flex flex-col lg:flex-row items-center gap-16">
+              <div class="service-image w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl">
+                <img src="/api/placeholder/800/600" alt="Commercial Construction" class="w-full h-auto">
+              </div>
+              <div class="service-details w-full lg:w-1/2">
+                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Commercial</span>
+                <h2 class="text-3xl font-bold mb-6 text-white">Commercial Construction</h2>
+                <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                  Creating functional, impressive commercial spaces that help businesses thrive. Our commercial construction services deliver high-quality, cost-effective solutions for a wide range of business needs, from office buildings to retail centers and industrial facilities.
+                </p>
+                <ul class="service-features grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Office Buildings</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Retail Spaces</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Restaurants & Hospitality</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Industrial Facilities</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Medical Facilities</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Educational Institutions</span></li>
+                </ul>
+                <a href="/contact" class="inline-block px-8 py-3 bg-gradient-primary text-white font-semibold rounded transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:transform hover:-translate-y-1">Request a Consultation</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sustainable Panel -->
+          <div class="service-panel absolute w-full transition-all duration-500 opacity-0 transform translate-x-full" id="sustainable-panel">
+            <div class="service-content flex flex-col lg:flex-row items-center gap-16">
+              <div class="service-image w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl">
+                <img src="/api/placeholder/800/600" alt="Sustainable Building" class="w-full h-auto">
+              </div>
+              <div class="service-details w-full lg:w-1/2">
+                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Sustainable</span>
+                <h2 class="text-3xl font-bold mb-6 text-white">Sustainable Building</h2>
+                <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                  Environmentally responsible construction practices that minimize impact and maximize efficiency. Our sustainable building services incorporate eco-friendly materials, energy-efficient systems, and innovative design approaches to create buildings that are both environmentally responsible and economically viable.
+                </p>
+                <ul class="service-features grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">LEED Certified Projects</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Energy-Efficient Systems</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Sustainable Materials</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Green Infrastructure</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Solar Integration</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Water Conservation Systems</span></li>
+                </ul>
+                <a href="/contact" class="inline-block px-8 py-3 bg-gradient-primary text-white font-semibold rounded transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:transform hover:-translate-y-1">Request a Consultation</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Renovation Panel -->
+          <div class="service-panel absolute w-full transition-all duration-500 opacity-0 transform translate-x-full" id="renovation-panel">
+            <div class="service-content flex flex-col lg:flex-row items-center gap-16">
+              <div class="service-image w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl">
+                <img src="/api/placeholder/800/600" alt="Renovation & Restoration" class="w-full h-auto">
+              </div>
+              <div class="service-details w-full lg:w-1/2">
+                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Renovation</span>
+                <h2 class="text-3xl font-bold mb-6 text-white">Renovation & Restoration</h2>
+                <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                  Breathing new life into existing structures while preserving their character and history. Our renovation and restoration services combine respect for architectural heritage with modern functionality, creating spaces that honor the past while meeting contemporary needs.
+                </p>
+                <ul class="service-features grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Historic Preservation</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Commercial Renovations</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Adaptive Reuse</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Structural Repairs</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Facade Restoration</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Interior Modernization</span></li>
+                </ul>
+                <a href="/contact" class="inline-block px-8 py-3 bg-gradient-primary text-white font-semibold rounded transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:transform hover:-translate-y-1">Request a Consultation</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Design-Build Panel -->
+          <div class="service-panel absolute w-full transition-all duration-500 opacity-0 transform translate-x-full" id="design-panel">
+            <div class="service-content flex flex-col lg:flex-row items-center gap-16">
+              <div class="service-image w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl">
+                <img src="/api/placeholder/800/600" alt="Design-Build Services" class="w-full h-auto">
+              </div>
+              <div class="service-details w-full lg:w-1/2">
+                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Design-Build</span>
+                <h2 class="text-3xl font-bold mb-6 text-white">Design-Build Services</h2>
+                <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                  A streamlined approach that integrates design and construction under a single contract. Our design-build services offer a collaborative, efficient process that reduces project timelines, minimizes risks, and ensures seamless coordination between all aspects of your project.
+                </p>
+                <ul class="service-features grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Integrated Project Delivery</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Architectural Design</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Engineering Solutions</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Value Engineering</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">3D Visualization</span></li>
+                  <li class="flex items-start"><span class="feature-icon text-primary mr-3">✓</span><span class="text-gray-300">Permitting Assistance</span></li>
+                </ul>
+                <a href="/contact" class="inline-block px-8 py-3 bg-gradient-primary text-white font-semibold rounded transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:transform hover:-translate-y-1">Request a Consultation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-controls flex justify-center mt-10">
+          <button class="carousel-btn bg-transparent border-2 border-primary text-primary w-12 h-12 rounded-full flex items-center justify-center mx-3 cursor-pointer transition-all duration-300 hover:bg-primary hover:text-black text-xl" id="prevBtn">←</button>
+          <button class="carousel-btn bg-transparent border-2 border-primary text-primary w-12 h-12 rounded-full flex items-center justify-center mx-3 cursor-pointer transition-all duration-300 hover:bg-primary hover:text-black text-xl" id="nextBtn">→</button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Why Choose Section -->
+    <section class="why-choose-section py-20 relative">
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-6 inline-block relative">
+            Why Choose <span class="text-primary">Ultraction</span>
+            <span class="absolute bottom-0 left-1/2 w-24 h-1 bg-gradient-primary -translate-x-1/2 rounded-full"></span>
+          </h2>
+          <p class="text-xl max-w-3xl mx-auto text-gray-300">
+            What sets us apart in the construction industry
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="reason-card bg-white/5 rounded-xl p-8 backdrop-blur-sm border border-white/5 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg">
+            <div class="reason-icon w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-primary mb-4">Proven Track Record</h3>
+            <p class="text-gray-300 leading-relaxed">
+              With over 15 years of experience and more than 200 successful projects, our portfolio demonstrates our commitment to excellence and client satisfaction.
+            </p>
+          </div>
+          <div class="reason-card bg-white/5 rounded-xl p-8 backdrop-blur-sm border border-white/5 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg">
+            <div class="reason-icon w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-primary mb-4">Expert Team</h3>
+            <p class="text-gray-300 leading-relaxed">
+              Our team of highly skilled professionals brings extensive experience and specialized expertise to every project, ensuring superior results.
+            </p>
+          </div>
+          <div class="reason-card bg-white/5 rounded-xl p-8 backdrop-blur-sm border border-white/5 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg">
+            <div class="reason-icon w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-primary mb-4">Innovative Approach</h3>
+            <p class="text-gray-300 leading-relaxed">
+              We embrace cutting-edge technologies and methodologies to deliver forward-thinking solutions that address modern challenges while anticipating future needs.
+            </p>
+          </div>
+          <div class="reason-card bg-white/5 rounded-xl p-8 backdrop-blur-sm border border-white/5 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg">
+            <div class="reason-icon w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-primary mb-4">On-Time Delivery</h3>
+            <p class="text-gray-300 leading-relaxed">
+              We understand the importance of timelines in construction projects and are committed to delivering on schedule without compromising quality.
+            </p>
+          </div>
+          <div class="reason-card bg-white/5 rounded-xl p-8 backdrop-blur-sm border border-white/5 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg">
+            <div class="reason-icon w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h.5A2.5 2.5 0 0020 5.5v-1.65" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-primary mb-4">Sustainability Focus</h3>
+            <p class="text-gray-300 leading-relaxed">
+              We are committed to environmentally responsible construction practices that minimize ecological impact while maximizing resource efficiency.
+            </p>
+          </div>
+          <div class="reason-card bg-white/5 rounded-xl p-8 backdrop-blur-sm border border-white/5 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg">
+            <div class="reason-icon w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-primary mb-4">Client-Centric Approach</h3>
+            <p class="text-gray-300 leading-relaxed">
+              Our clients' vision, needs, and satisfaction are at the heart of everything we do. We listen attentively, communicate clearly, and work tirelessly to exceed expectations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Certifications Section -->
+    <section class="certifications-section py-20 relative">
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-6 inline-block relative">
+            Our <span class="text-primary">Certifications</span>
+            <span class="absolute bottom-0 left-1/2 w-24 h-1 bg-gradient-primary -translate-x-1/2 rounded-full"></span>
+          </h2>
+          <p class="text-xl max-w-3xl mx-auto text-gray-300">
+            Industry recognitions that validate our commitment to excellence
+          </p>
+        </div>
+        <div class="certifications-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div class="certification-item bg-white/5 p-6 rounded-xl flex flex-col items-center justify-center text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:bg-white/10">
+            <img src="/api/placeholder/100/100" alt="LEED Certification" class="w-16 h-16 mb-4">
+            <h3 class="text-lg font-semibold text-primary">LEED Certified</h3>
+          </div>
+          <div class="certification-item bg-white/5 p-6 rounded-xl flex flex-col items-center justify-center text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:bg-white/10">
+            <img src="/api/placeholder/100/100" alt="ISO 9001" class="w-16 h-16 mb-4">
+            <h3 class="text-lg font-semibold text-primary">ISO 9001</h3>
+          </div>
+          <div class="certification-item bg-white/5 p-6 rounded-xl flex flex-col items-center justify-center text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:bg-white/10">
+            <img src="/api/placeholder/100/100" alt="Energy Star" class="w-16 h-16 mb-4">
+            <h3 class="text-lg font-semibold text-primary">Energy Star</h3>
+          </div>
+          <div class="certification-item bg-white/5 p-6 rounded-xl flex flex-col items-center justify-center text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:bg-white/10">
+            <img src="/api/placeholder/100/100" alt="Green Building Council" class="w-16 h-16 mb-4">
+            <h3 class="text-lg font-semibold text-primary">Green Building Council</h3>
+          </div>
+          <div class="certification-item bg-white/5 p-6 rounded-xl flex flex-col items-center justify-center text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:bg-white/10">
+            <img src="/api/placeholder/100/100" alt="OSHA Safety" class="w-16 h-16 mb-4">
+            <h3 class="text-lg font-semibold text-primary">OSHA Safety</h3>
+          </div>
+          <div class="certification-item bg-white/5 p-6 rounded-xl flex flex-col items-center justify-center text-center transition-all duration-300 hover:transform hover:-translate-y-2 hover:bg-white/10">
+            <img src="/api/placeholder/100/100" alt="Builders Association" class="w-16 h-16 mb-4">
+            <h3 class="text-lg font-semibold text-primary">Builders Association</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Process Section -->
+    <section class="process-section py-20 relative">
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="section-header text-center mb-16">
+          <h2 class="text-4xl font-bold mb-6 inline-block relative">
+            Our <span class="text-primary">Process</span>
+            <span class="absolute bottom-0 left-1/2 w-24 h-1 bg-gradient-primary -translate-x-1/2 rounded-full"></span>
+          </h2>
+          <p class="text-xl max-w-3xl mx-auto text-gray-300">
+            A methodical approach to bringing your vision to life
+          </p>
+        </div>
+        <div class="process-timeline relative max-w-4xl mx-auto">
+          <div class="timeline-line absolute top-0 left-1/2 -translate-x-1/2 w-0.5 h-full bg-primary/30"></div>
+          <div class="timeline-item relative w-1/2 p-8 mb-10 left-0 text-right pr-16">
+            <div class="timeline-marker absolute top-8 right-[-20px] w-10 h-10 bg-primary rounded-full flex items-center justify-center text-black font-bold z-10">1</div>
+            <div class="timeline-content p-8 bg-white/5 rounded-lg shadow-lg">
+              <h3 class="timeline-title text-2xl font-semibold mb-4 text-primary">Initial Consultation</h3>
+              <p class="timeline-text text-base leading-relaxed text-gray-300">
+                We begin by understanding your vision, requirements, and budget to establish a solid foundation for your project.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item relative w-1/2 p-8 mb-10 left-1/2 pl-16">
+            <div class="timeline-marker absolute top-8 left-[-20px] w-10 h-10 bg-primary rounded-full flex items-center justify-center text-black font-bold z-10">2</div>
+            <div class="timeline-content p-8 bg-white/5 rounded-lg shadow-lg">
+              <h3 class="timeline-title text-2xl font-semibold mb-4 text-primary">Concept & Design</h3>
+              <p class="timeline-text text-base leading-relaxed text-gray-300">
+                Our design team creates detailed plans and visualizations to bring your project to life before construction begins.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item relative w-1/2 p-8 mb-10 left-0 text-right pr-16">
+            <div class="timeline-marker absolute top-8 right-[-20px] w-10 h-10 bg-primary rounded-full flex items-center justify-center text-black font-bold z-10">3</div>
+            <div class="timeline-content p-8 bg-white/5 rounded-lg shadow-lg">
+              <h3 class="timeline-title text-2xl font-semibold mb-4 text-primary">Estimating & Planning</h3>
+              <p class="timeline-text text-base leading-relaxed text-gray-300">
+                We develop comprehensive budgets, timelines, and resource plans to ensure efficient execution.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item relative w-1/2 p-8 mb-10 left-1/2 pl-16">
+            <div class="timeline-marker absolute top-8 left-[-20px] w-10 h-10 bg-primary rounded-full flex items-center justify-center text-black font-bold z-10">4</div>
+            <div class="timeline-content p-8 bg-white/5 rounded-lg shadow-lg">
+              <h3 class="timeline-title text-2xl font-semibold mb-4 text-primary">Construction Phase</h3>
+              <p class="timeline-text text-base leading-relaxed text-gray-300">
+                Our skilled teams execute the project with precision, quality craftsmanship, and attention to detail.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item relative w-1/2 p-8 mb-10 left-0 text-right pr-16">
+            <div class="timeline-marker absolute top-8 right-[-20px] w-10 h-10 bg-primary rounded-full flex items-center justify-center text-black font-bold z-10">5</div>
+            <div class="timeline-content p-8 bg-white/5 rounded-lg shadow-lg">
+              <h3 class="timeline-title text-2xl font-semibold mb-4 text-primary">Quality Control</h3>
+              <p class="timeline-text text-base leading-relaxed text-gray-300">
+                Rigorous inspections and quality checks ensure every aspect meets our high standards.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item relative w-1/2 p-8 mb-10 left-1/2 pl-16">
+            <div class="timeline-marker absolute top-8 left-[-20px] w-10 h-10 bg-primary rounded-full flex items-center justify-center text-black font-bold z-10">6</div>
+            <div class="timeline-content p-8 bg-white/5 rounded-lg shadow-lg">
+              <h3 class="timeline-title text-2xl font-semibold mb-4 text-primary">Project Completion</h3>
+              <p class="timeline-text text-base leading-relaxed text-gray-300">
+                Final walkthrough, documentation handover, and ensuring complete client satisfaction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section py-20 text-center relative">
+      <div class="cta-container max-w-3xl mx-auto p-16 bg-white/5 rounded-lg relative overflow-hidden z-10">
+        <div class="cta-pattern absolute inset-0 opacity-5" style="background-image: radial-gradient(var(--primary) 2px, transparent 2px); background-size: 20px 20px;"></div>
+        <h2 class="cta-title text-4xl font-bold mb-5 text-white">Ready to Start Your Project?</h2>
+        <p class="cta-text text-lg max-w-xl mx-auto mb-8 text-gray-300">
+          Contact us today to discuss your construction needs and discover how Ultraction can bring your vision to life.
+        </p>
+        <a href="/contact" class="cta-button inline-block px-10 py-4 bg-gradient-primary text-white no-underline font-semibold rounded transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/30">Request a Consultation</a>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Services Carousel Functionality
+    const serviceTabs = document.querySelectorAll('.service-tab');
+    const servicePanels = document.querySelectorAll('.service-panel');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    
+    let currentIndex = 0;
+    const panelIds = ['residential', 'commercial', 'sustainable', 'renovation', 'design'];
+    
+    function showPanel(index) {
+      servicePanels.forEach(panel => {
+        panel.classList.remove('active');
+        panel.classList.add('opacity-0');
+        if (panel.id === `${panelIds[index]}-panel`) {
+          panel.classList.add('translate-x-0');
+          panel.classList.remove('translate-x-full', 'translate-x-[-100%]');
+        } else if (panel.id.includes(panelIds[index < panelIds.length - 1 ? index + 1 : 0])) {
+          panel.classList.add('translate-x-full');
+          panel.classList.remove('translate-x-0', 'translate-x-[-100%]');
+        } else {
+          panel.classList.add('translate-x-[-100%]');
+          panel.classList.remove('translate-x-0', 'translate-x-full');
+        }
+      });
+      
+      const currentPanel = document.getElementById(`${panelIds[index]}-panel`);
+      if (currentPanel) {
+        setTimeout(() => {
+          currentPanel.classList.add('active', 'opacity-100');
+        }, 50);
+      }
+      
+      serviceTabs.forEach(tab => {
+        tab.classList.remove('active');
+        tab.classList.add('text-gray-400');
+        tab.classList.remove('text-white');
+      });
+      
+      const activeTab = document.querySelector(`.service-tab[data-tab="${panelIds[index]}"]`);
+      if (activeTab) {
+        activeTab.classList.add('active');
+        activeTab.classList.remove('text-gray-400');
+        activeTab.classList.add('text-white');
+      }
+    }
+    
+    serviceTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        const tabId = this.getAttribute('data-tab');
+        currentIndex = panelIds.indexOf(tabId);
+        showPanel(currentIndex);
+      });
+    });
+    
+    prevBtn?.addEventListener('click', function() {
+      currentIndex = (currentIndex - 1 + panelIds.length) % panelIds.length;
+      showPanel(currentIndex);
+    });
+    
+    nextBtn?.addEventListener('click', function() {
+      currentIndex = (currentIndex + 1) % panelIds.length;
+      showPanel(currentIndex);
+    });
+    
+    showPanel(currentIndex);
+    
+    // Mobile responsive adjustments for timeline
+    function adjustTimelineForMobile() {
+      const timelineLine = document.querySelector('.timeline-line');
+      const timelineItems = document.querySelectorAll('.timeline-item');
+      
+      if (window.innerWidth <= 992) {
+        if (timelineLine) timelineLine.style.left = '20px';
+        
+        timelineItems.forEach(item => {
+          item.style.width = '100%';
+          item.style.paddingLeft = '60px';
+          item.style.paddingRight = '30px';
+          item.style.textAlign = 'left';
+          
+          if (item.classList.contains('left-0')) {
+            item.style.paddingRight = '30px';
+            item.style.textAlign = 'left';
+          }
+          
+          if (item.classList.contains('left-1/2')) {
+            item.style.left = '0';
+          }
+          
+          const marker = item.querySelector('.timeline-marker');
+          if (marker) {
+            marker.style.left = '0';
+            marker.style.right = 'auto';
+          }
+        });
+      } else {
+        if (timelineLine) timelineLine.style.left = '50%';
+        
+        timelineItems.forEach(item => {
+          if (item.classList.contains('left-0')) {
+            item.style.width = '50%';
+            item.style.paddingRight = '4rem';
+            item.style.paddingLeft = '2rem';
+            item.style.textAlign = 'right';
+            const marker = item.querySelector('.timeline-marker');
+            if (marker) {
+              marker.style.right = '-20px';
+              marker.style.left = 'auto';
+            }
+          }
+          
+          if (item.classList.contains('left-1/2')) {
+            item.style.width = '50%';
+            item.style.paddingLeft = '4rem';
+            item.style.paddingRight = '2rem';
+            item.style.textAlign = 'left';
+            item.style.left = '50%';
+            const marker = item.querySelector('.timeline-marker');
+            if (marker) {
+              marker.style.left = '-20px';
+              marker.style.right = 'auto';
+            }
+          }
+        });
+      }
+    }
+    
+    adjustTimelineForMobile();
+    window.addEventListener('resize', adjustTimelineForMobile);
+  });
+</script>
+
+<style>
+  .service-tab.active {
+    position: relative;
+  }
+  
+  .service-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 3px;
+  }
+  
+  .service-panel {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .service-panel.active {
+    position: relative;
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 10;
+  }
+  
+  @media (max-width: 992px) {
+    .timeline-line {
+      left: 20px;
+    }
+    
+    .timeline-item {
+      width: 100%;
+      padding-left: 60px;
+      padding-right: 30px;
+      text-align: left;
+    }
+    
+    .timeline-item:nth-child(odd) {
+      padding-right: 30px;
+      text-align: left;
+    }
+    
+    .timeline-item:nth-child(even) {
+      left: 0;
+    }
+    
+    .timeline-marker {
+      left: 0 !important;
+      right: auto !important;
+    }
+  }
+</style>
