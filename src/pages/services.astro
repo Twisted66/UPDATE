@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout 
   title="Services" 
-  description="Explore our comprehensive construction services tailored to your specific needs, from residential and commercial construction to sustainable building solutions."
+  description="Explore our comprehensive construction services tailored to your specific needs, from industrial buildings to sustainable infrastructure solutions."
 >
   <!-- Apply Index Background -->
   <div class="fixed inset-0 -z-10 bg-gradient-to-br from-black/80 via-gray-900 to-black">
@@ -30,7 +30,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="container mx-auto px-6">
         <div class="max-w-4xl mx-auto text-center animate-fade-in">
           <p class="text-xl leading-relaxed text-gray-300">
-            At Ultraction General Contracting, we offer a comprehensive range of construction services designed to meet the diverse needs of our clients. From residential and commercial construction to specialized services like sustainable building and infrastructure development, our experienced team delivers excellence at every stage of the project lifecycle.
+            At Ultraction General Contracting, we offer a comprehensive range of construction services designed to meet the diverse needs of our clients. From industrial, commercial, and residential buildings to specialized infrastructure like bridges, water reservoirs, and heritage revitalization, our experienced team delivers excellence at every stage of the project lifecycle.
           </p>
         </div>
       </div>
@@ -50,29 +50,34 @@ import Layout from '../layouts/Layout.astro';
         </div>
         
         <div class="services-tabs flex flex-wrap justify-center gap-4 mb-10">
-          <button class="service-tab active px-6 py-3 rounded-full text-white font-medium bg-white/5 border border-white/10 transition-all duration-300 hover:bg-primary/20 hover:text-primary" data-tab="residential">Residential</button>
-          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium bg-white/5 border border-white/10 transition-all duration-300 hover:bg-primary/20 hover:text-primary" data-tab="commercial">Commercial</button>
-          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium bg-white/5 border border-white/10 transition-all duration-300 hover:bg-primary/20 hover:text-primary" data-tab="sustainable">Sustainable</button>
-          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium bg-white/5 border border-white/10 transition-all duration-300 hover:bg-primary/20 hover:text-primary" data-tab="renovation">Renovation</button>
-          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium bg-white/5 border border-white/10 transition-all duration-300 hover:bg-primary/20 hover:text-primary" data-tab="design">Design-Build</button>
+          <button class="service-tab active px-6 py-3 rounded-full text-white font-medium bg-white/5 border border-white/10 transition-all duration-300 hover:bg-primary/20 hover:text-primary" data-tab="buildings">Buildings</button>
+          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium bg-white/5 border border-white/10 transition-all duration-300 hover:bg-primary/20 hover:text-primary" data-tab="bridges">Bridges</button>
+          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium bg-white/5 border border-white/10 transition-all duration-300 hover:bg-primary/20 hover:text-primary" data-tab="water">Water</button>
+          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium bg-white/5 border border-white/10 transition-all duration-300 hover:bg-primary/20 hover:text-primary" data-tab="power">Power</button>
+          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium bg-white/5 border border-white/10 transition-all duration-300 hover:bg-primary/20 hover:text-primary" data-tab="seaports">Seaports</button>
+          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium bg-white/5 border border-white/10 transition-all duration-300 hover:bg-primary/20 hover:text-primary" data-tab="utilities">Utilities</button>
+          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium bg-white/5 border border-white/10 transition-all duration-300 hover:bg-primary/20 hover:text-primary" data-tab="oilgas">Oil & Gas</button>
+          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium bg-white/5 border border-white/10 transition-all duration-300 hover:bg-primary/20 hover:text-primary" data-tab="heritage">Heritage</button>
+          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium bg-white/5 border border-white/10 transition-all duration-300 hover:bg-primary/20 hover:text-primary" data-tab="pipeline">Pipeline</button>
+          <button class="service-tab px-6 py-3 rounded-full text-gray-400 font-medium bg-white/5 border border-white/10 transition-all duration-300 hover:bg-primary/20 hover:text-primary" data-tab="roadworks">Road Works</button>
         </div>
         
         <div class="services-content relative min-h-[500px] perspective-1000">
-          <!-- Residential Panel -->
-          <div class="service-panel active absolute w-full transition-all duration-700 opacity-100 transform translate-x-0 rotate-y-0" id="residential-panel">
+          <!-- 1. Industrial, Commercial, and Residential Buildings -->
+          <div class="service-panel active absolute w-full transition-all duration-700 opacity-100 transform translate-x-0 rotate-y-0" id="buildings-panel">
             <div class="service-content flex flex-col lg:flex-row items-center gap-8 lg:gap-16 bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-xl">
               <div class="service-image w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl relative group">
-                <img src="/api/placeholder/800/600" alt="Residential Construction" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
+                <img src="/api/placeholder/800/600" alt="Buildings Construction" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div class="service-details w-full lg:w-1/2">
-                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4 animate-fade-in">Residential</span>
-                <h2 class="text-3xl font-bold mb-6 text-white animate-slide-in-right">Residential Construction</h2>
+                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4 animate-fade-in">Buildings</span>
+                <h2 class="text-3xl font-bold mb-6 text-white animate-slide-in-right">Industrial, Commercial, and Residential Buildings</h2>
                 <p class="text-lg leading-relaxed mb-6 text-gray-300">
-                  We create beautiful, functional homes that reflect your lifestyle and meet your unique needs. Our residential construction services encompass everything from custom home building to comprehensive renovations, all delivered with meticulous attention to detail and quality craftsmanship.
+                  Specializing in the construction of industrial, commercial, and residential buildings, including palaces, we offer tailored services from planning to execution, ensuring structures meet industry standards, are functional, and reflect aesthetic aspirations.
                 </p>
                 <ul class="service-features grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                  {['Custom Home Building', 'Home Renovations', 'Luxury Residential Projects', 'Multi-Family Developments', 'Additions & Extensions', 'Interior Remodeling'].map((feature, index) => (
+                  {['Industrial Facilities', 'Commercial Spaces', 'Residential Homes', 'Luxury Palaces', 'Planning & Design', 'Quality Execution'].map((feature, index) => (
                     <li class="flex items-start animate-fade-in" style={`animation-delay: ${index * 100}ms`}>
                       <span class="feature-icon text-primary mr-3">✓</span>
                       <span class="text-gray-300">{feature}</span>
@@ -84,21 +89,21 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           
-          <!-- Commercial Panel -->
-          <div class="service-panel absolute w-full transition-all duration-700 opacity-0 transform translate-x-full rotate-y-15" id="commercial-panel">
+          <!-- 2. Bridges, Underpasses, and Box Culverts -->
+          <div class="service-panel absolute w-full transition-all duration-700 opacity-0 transform translate-x-full rotate-y-15" id="bridges-panel">
             <div class="service-content flex flex-col lg:flex-row items-center gap-8 lg:gap-16 bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-xl">
               <div class="service-image w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl relative group">
-                <img src="/api/placeholder/800/600" alt="Commercial Construction" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
+                <img src="/api/placeholder/800/600" alt="Bridges Construction" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div class="service-details w-full lg:w-1/2">
-                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Commercial</span>
-                <h2 class="text-3xl font-bold mb-6 text-white">Commercial Construction</h2>
+                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Bridges</span>
+                <h2 class="text-3xl font-bold mb-6 text-white">Bridges, Underpasses, and Box Culverts</h2>
                 <p class="text-lg leading-relaxed mb-6 text-gray-300">
-                  Creating functional, impressive commercial spaces that help businesses thrive. Our commercial construction services deliver high-quality, cost-effective solutions for a wide range of business needs.
+                  Providing end-to-end services from planning to construction and handover, we focus on safety, aesthetics, and functionality, delivering structural engineering excellence for resilient transportation and water management systems.
                 </p>
                 <ul class="service-features grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                  {['Office Buildings', 'Retail Spaces', 'Restaurants & Hospitality', 'Industrial Facilities', 'Medical Facilities', 'Educational Institutions'].map((feature, index) => (
+                  {['Bridge Construction', 'Underpass Design', 'Box Culverts', 'Safety Standards', 'Aesthetic Integration', 'Structural Resilience'].map((feature, index) => (
                     <li class="flex items-start animate-fade-in" style={`animation-delay: ${index * 100}ms`}>
                       <span class="feature-icon text-primary mr-3">✓</span>
                       <span class="text-gray-300">{feature}</span>
@@ -110,21 +115,21 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           
-          <!-- Sustainable Panel -->
-          <div class="service-panel absolute w-full transition-all duration-700 opacity-0 transform translate-x-full rotate-y-15" id="sustainable-panel">
+          <!-- 3. Water Reservoirs and Pump Stations -->
+          <div class="service-panel absolute w-full transition-all duration-700 opacity-0 transform translate-x-full rotate-y-15" id="water-panel">
             <div class="service-content flex flex-col lg:flex-row items-center gap-8 lg:gap-16 bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-xl">
               <div class="service-image w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl relative group">
-                <img src="/api/placeholder/800/600" alt="Sustainable Building" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
+                <img src="/api/placeholder/800/600" alt="Water Management" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div class="service-details w-full lg:w-1/2">
-                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Sustainable</span>
-                <h2 class="text-3xl font-bold mb-6 text-white">Sustainable Building</h2>
+                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Water</span>
+                <h2 class="text-3xl font-bold mb-6 text-white">Water Reservoirs and Pump Stations</h2>
                 <p class="text-lg leading-relaxed mb-6 text-gray-300">
-                  Environmentally responsible construction practices that minimize impact and maximize efficiency. Our sustainable building services incorporate eco-friendly materials and innovative design approaches.
+                  Specializing in design, construction, and maintenance of water reservoirs and pump stations, we ensure efficient water management with an emphasis on sustainability and customized solutions for diverse project requirements.
                 </p>
                 <ul class="service-features grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                  {['LEED Certified Projects', 'Energy-Efficient Systems', 'Sustainable Materials', 'Green Infrastructure', 'Solar Integration', 'Water Conservation Systems'].map((feature, index) => (
+                  {['Reservoir Design', 'Pump Station Construction', 'Maintenance Services', 'Efficient Water Flow', 'Sustainable Solutions', 'Custom Engineering'].map((feature, index) => (
                     <li class="flex items-start animate-fade-in" style={`animation-delay: ${index * 100}ms`}>
                       <span class="feature-icon text-primary mr-3">✓</span>
                       <span class="text-gray-300">{feature}</span>
@@ -136,21 +141,21 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           
-          <!-- Renovation Panel -->
-          <div class="service-panel absolute w-full transition-all duration-700 opacity-0 transform translate-x-full rotate-y-15" id="renovation-panel">
+          <!-- 4. Power Plants, Distribution Substations, and Control Buildings -->
+          <div class="service-panel absolute w-full transition-all duration-700 opacity-0 transform translate-x-full rotate-y-15" id="power-panel">
             <div class="service-content flex flex-col lg:flex-row items-center gap-8 lg:gap-16 bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-xl">
               <div class="service-image w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl relative group">
-                <img src="/api/placeholder/800/600" alt="Renovation & Restoration" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
+                <img src="/api/placeholder/800/600" alt="Power Infrastructure" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div class="service-details w-full lg:w-1/2">
-                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Renovation</span>
-                <h2 class="text-3xl font-bold mb-6 text-white">Renovation & Restoration</h2>
+                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Power</span>
+                <h2 class="text-3xl font-bold mb-6 text-white">Power Plants, Distribution Substations, and Control Buildings</h2>
                 <p class="text-lg leading-relaxed mb-6 text-gray-300">
-                  Breathing new life into existing structures while preserving their character and history. Our renovation services combine respect for architectural heritage with modern functionality.
+                  Providing civil works for power plants, distribution substations, and control buildings, we cover planning to maintenance, adhering to strict safety, functionality, and reliability standards.
                 </p>
                 <ul class="service-features grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                  {['Historic Preservation', 'Commercial Renovations', 'Adaptive Reuse', 'Structural Repairs', 'Facade Restoration', 'Interior Modernization'].map((feature, index) => (
+                  {['Power Plant Civil Works', 'Substation Construction', 'Control Buildings', 'Safety Compliance', 'Reliability Standards', 'Maintenance Services'].map((feature, index) => (
                     <li class="flex items-start animate-fade-in" style={`animation-delay: ${index * 100}ms`}>
                       <span class="feature-icon text-primary mr-3">✓</span>
                       <span class="text-gray-300">{feature}</span>
@@ -162,21 +167,151 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           
-          <!-- Design-Build Panel -->
-          <div class="service-panel absolute w-full transition-all duration-700 opacity-0 transform translate-x-full rotate-y-15" id="design-panel">
+          <!-- 5. Civil Works for Seaports and Airports -->
+          <div class="service-panel absolute w-full transition-all duration-700 opacity-0 transform translate-x-full rotate-y-15" id="seaports-panel">
             <div class="service-content flex flex-col lg:flex-row items-center gap-8 lg:gap-16 bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-xl">
               <div class="service-image w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl relative group">
-                <img src="/api/placeholder/800/600" alt="Design-Build Services" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
+                <img src="/api/placeholder/800/600" alt="Seaports and Airports" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div class="service-details w-full lg:w-1/2">
-                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Design-Build</span>
-                <h2 class="text-3xl font-bold mb-6 text-white">Design-Build Services</h2>
+                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Seaports</span>
+                <h2 class="text-3xl font-bold mb-6 text-white">Civil Works for Seaports and Airports</h2>
                 <p class="text-lg leading-relaxed mb-6 text-gray-300">
-                  A streamlined approach that integrates design and construction under a single contract. Our design-build services offer a collaborative, efficient process that ensures seamless coordination.
+                  Offering comprehensive civil works from planning to construction, we support critical infrastructure in the maritime and aviation sectors, ensuring precision and compliance with international standards.
                 </p>
                 <ul class="service-features grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                  {['Integrated Project Delivery', 'Architectural Design', 'Engineering Solutions', 'Value Engineering', '3D Visualization', 'Permitting Assistance'].map((feature, index) => (
+                  {['Seaport Infrastructure', 'Airport Civil Works', 'Planning Services', 'Construction Excellence', 'International Standards', 'Precision Engineering'].map((feature, index) => (
+                    <li class="flex items-start animate-fade-in" style={`animation-delay: ${index * 100}ms`}>
+                      <span class="feature-icon text-primary mr-3">✓</span>
+                      <span class="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href="/contact" class="inline-block px-8 py-3 bg-gradient-primary text-white font-semibold rounded transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:transform hover:-translate-y-1">Request a Consultation</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 6. Utilities Infrastructure Development -->
+          <div class="service-panel absolute w-full transition-all duration-700 opacity-0 transform translate-x-full rotate-y-15" id="utilities-panel">
+            <div class="service-content flex flex-col lg:flex-row items-center gap-8 lg:gap-16 bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-xl">
+              <div class="service-image w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl relative group">
+                <img src="/api/placeholder/800/600" alt="Utilities Infrastructure" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div class="service-details w-full lg:w-1/2">
+                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Utilities</span>
+                <h2 class="text-3xl font-bold mb-6 text-white">Utilities Infrastructure Development</h2>
+                <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                  Covering water distribution, drainage systems, power, and communication lines, we focus on functionality, reliability, and seamless integration into broader networks.
+                </p>
+                <ul class="service-features grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                  {['Water Distribution', 'Drainage Systems', 'Power Lines', 'Communication Networks', 'Reliability Focus', 'Network Integration'].map((feature, index) => (
+                    <li class="flex items-start animate-fade-in" style={`animation-delay: ${index * 100}ms`}>
+                      <span class="feature-icon text-primary mr-3">✓</span>
+                      <span class="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href="/contact" class="inline-block px-8 py-3 bg-gradient-primary text-white font-semibold rounded transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:transform hover:-translate-y-1">Request a Consultation</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 7. Onshore and Offshore Civil Works (Oil & Gas Field) -->
+          <div class="service-panel absolute w-full transition-all duration-700 opacity-0 transform translate-x-full rotate-y-15" id="oilgas-panel">
+            <div class="service-content flex flex-col lg:flex-row items-center gap-8 lg:gap-16 bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-xl">
+              <div class="service-image w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl relative group">
+                <img src="/api/placeholder/800/600" alt="Oil & Gas Civil Works" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div class="service-details w-full lg:w-1/2">
+                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Oil & Gas</span>
+                <h2 class="text-3xl font-bold mb-6 text-white">Onshore and Offshore Civil Works (Oil & Gas)</h2>
+                <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                  Offering planning, design, and execution of essential infrastructure on land and sea, we comply with industry standards, ensuring safety, durability, and environmental responsibility.
+                </p>
+                <ul class="service-features grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                  {['Onshore Infrastructure', 'Offshore Construction', 'Planning & Design', 'Safety Compliance', 'Durability Standards', 'Environmental Care'].map((feature, index) => (
+                    <li class="flex items-start animate-fade-in" style={`animation-delay: ${index * 100}ms`}>
+                      <span class="feature-icon text-primary mr-3">✓</span>
+                      <span class="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href="/contact" class="inline-block px-8 py-3 bg-gradient-primary text-white font-semibold rounded transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:transform hover:-translate-y-1">Request a Consultation</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 8. Heritage Revitalization Projects -->
+          <div class="service-panel absolute w-full transition-all duration-700 opacity-0 transform translate-x-full rotate-y-15" id="heritage-panel">
+            <div class="service-content flex flex-col lg:flex-row items-center gap-8 lg:gap-16 bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-xl">
+              <div class="service-image w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl relative group">
+                <img src="/api/placeholder/800/600" alt="Heritage Revitalization" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div class="service-details w-full lg:w-1/2">
+                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Heritage</span>
+                <h2 class="text-3xl font-bold mb-6 text-white">Heritage Revitalization Projects</h2>
+                <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                  Specializing in preserving and restoring historical and cultural landmarks, we use advanced restoration techniques while maintaining historical authenticity and ensuring sustainable integration of modern amenities.
+                </p>
+                <ul class="service-features grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                  {['Historical Preservation', 'Restoration Techniques', 'Cultural Landmarks', 'Authenticity Focus', 'Modern Integration', 'Sustainability'].map((feature, index) => (
+                    <li class="flex items-start animate-fade-in" style={`animation-delay: ${index * 100}ms`}>
+                      <span class="feature-icon text-primary mr-3">✓</span>
+                      <span class="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href="/contact" class="inline-block px-8 py-3 bg-gradient-primary text-white font-semibold rounded transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:transform hover:-translate-y-1">Request a Consultation</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 9. Pipeline and Storm Network -->
+          <div class="service-panel absolute w-full transition-all duration-700 opacity-0 transform translate-x-full rotate-y-15" id="pipeline-panel">
+            <div class="service-content flex flex-col lg:flex-row items-center gap-8 lg:gap-16 bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-xl">
+              <div class="service-image w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl relative group">
+                <img src="/api/placeholder/800/600" alt="Pipeline and Storm Network" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div class="service-details w-full lg:w-1/2">
+                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Pipeline</span>
+                <h2 class="text-3xl font-bold mb-6 text-white">Pipeline and Storm Network</h2>
+                <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                  Providing end-to-end services for pipeline infrastructure and stormwater management, we ensure efficient transport of substances and stormwater flow control, implementing sustainable urban and industrial solutions.
+                </p>
+                <ul class="service-features grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                  {['Pipeline Construction', 'Stormwater Management', 'End-to-End Services', 'Efficient Transport', 'Flow Control', 'Sustainable Solutions'].map((feature, index) => (
+                    <li class="flex items-start animate-fade-in" style={`animation-delay: ${index * 100}ms`}>
+                      <span class="feature-icon text-primary mr-3">✓</span>
+                      <span class="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href="/contact" class="inline-block px-8 py-3 bg-gradient-primary text-white font-semibold rounded transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:transform hover:-translate-y-1">Request a Consultation</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 10. Road Works and Earthworks -->
+          <div class="service-panel absolute w-full transition-all duration-700 opacity-0 transform translate-x-full rotate-y-15" id="roadworks-panel">
+            <div class="service-content flex flex-col lg:flex-row items-center gap-8 lg:gap-16 bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-xl">
+              <div class="service-image w-full lg:w-1/2 rounded-xl overflow-hidden shadow-2xl relative group">
+                <img src="/api/placeholder/800/600" alt="Road Works and Earthworks" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div class="service-details w-full lg:w-1/2">
+                <span class="service-category inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">Road Works</span>
+                <h2 class="text-3xl font-bold mb-6 text-white">Road Works and Earthworks</h2>
+                <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                  Covering road construction, excavation, and earth-moving projects, we ensure strict compliance with industry regulations, focusing on quality, durability, and sustainability.
+                </p>
+                <ul class="service-features grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                  {['Road Construction', 'Excavation Services', 'Earth-Moving Projects', 'Regulatory Compliance', 'Quality Assurance', 'Sustainable Practices'].map((feature, index) => (
                     <li class="flex items-start animate-fade-in" style={`animation-delay: ${index * 100}ms`}>
                       <span class="feature-icon text-primary mr-3">✓</span>
                       <span class="text-gray-300">{feature}</span>
@@ -320,7 +455,7 @@ import Layout from '../layouts/Layout.astro';
     const servicePanels = document.querySelectorAll('.service-panel');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-    const panelIds = ['residential', 'commercial', 'sustainable', 'renovation', 'design'];
+    const panelIds = ['buildings', 'bridges', 'water', 'power', 'seaports', 'utilities', 'oilgas', 'heritage', 'pipeline', 'roadworks'];
     let currentIndex = 0;
     
     function showPanel(index, direction = 'next') {
