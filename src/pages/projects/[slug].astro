@@ -1,0 +1,338 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { projects } from '../../data/projects.js';
+
+export function getStaticPaths() {
+  return projects.map(project => ({
+    params: { slug: project.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const project = projects.find(p => p.slug === slug);
+
+if (!project) {
+  return Astro.redirect('/404');
+}
+
+const {
+  title,
+  category,
+  description,
+  features,
+  image,
+  location,
+  size,
+  duration,
+  completion,
+  client,
+  architect,
+  certification,
+  awards,
+  gallery,
+  testimonial,
+} = project;
+
+const nextProjects = projects
+  .filter(p => p.slug !== slug)
+  .sort(() => 0.5 - Math.random())
+  .slice(0, 3);
+---
+
+<Layout 
+  title={`${title} | Project Detail`} 
+  description={`${title} - ${description}`}
+>
+  <div class="fixed inset-0 -z-10 bg-gradient-to-br from-dark/80 via-gray-900 to-dark">
+    <div class="absolute inset-0 z-0">
+      <div class="bg-[radial-gradient(circle_at_30%_30%,rgba(255,107,53,0.1)_0%,transparent_70%)] absolute inset-0"></div>
+      <div class="bg-[radial-gradient(circle_at_70%_70%,rgba(255,107,53,0.1)_0%,transparent_70%)] absolute inset-0"></div>
+    </div>
+  </div>
+
+  <div class="container mx-auto">
+    <section class="project-header relative h-[70vh] min-h-[500px] flex items-end overflow-hidden mb-20">
+      <div class="project-hero-image absolute top-0 left-0 w-full h-full bg-center bg-cover opacity-0 animate-zoom-fade" style={`background-image: url('${image}')`}></div>
+      <div class="project-hero-overlay absolute top-0 left-0 w-full h-full bg-gradient-to-t from-dark via-dark/70 to-dark/30"></div>
+      <div class="project-title-container relative z-10 w-full px-10 pb-10 text-light">
+        <span class="project-category inline-block px-5 py-2 bg-primary text-light text-sm rounded-full mb-4 transform translate-y-8 opacity-0 animate-slide-up">{category}</span>
+        <h1 class="project-title text-5xl md:text-6xl font-bold mb-5 transform translate-y-8 opacity-0 animate-slide-up animation-delay-300">{title}</h1>
+        <p class="project-location text-xl opacity-80 mb-4 transform translate-y-8 opacity-0 animate-slide-up animation-delay-500">{location}</p>
+        <div class="project-stats flex flex-wrap gap-8 mt-8 transform translate-y-8 opacity-0 animate-slide-up animation-delay-700">
+          <div class="project-stat flex items-center gap-3">
+            <div class="stat-icon w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+            </div>
+            <span class="stat-value font-semibold text-primary">{size}</span>
+          </div>
+          <div class="project-stat flex items-center gap-3">
+            <div class="stat-icon w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <span class="stat-value font-semibold text-primary">{duration}</span>
+          </div>
+          <div class="project-stat flex items-center gap-3">
+            <div class="stat-icon w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+            </div>
+            <span class="stat-value font-semibold text-primary">{certification || 'N/A'}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content grid grid-cols-1 lg:grid-cols-3 gap-16 max-w-7xl mx-auto px-6 mb-20">
+      <div class="project-description lg:col-span-2 text-light">
+        <p class="text-lg leading-relaxed opacity-90 mb-6">{description}</p>
+      </div>
+      <div class="project-sidebar">
+        <div class="sidebar-content bg-white/5 rounded-xl p-8 backdrop-blur-md border border-white/10 sticky top-24">
+          <h3 class="text-2xl font-semibold text-primary mb-6 pb-4 border-b border-white/10">Project Details</h3>
+          <ul class="project-details-list text-light">
+            <li class="flex justify-between py-4 border-b border-white/5">
+              <span class="detail-label font-medium opacity-70">Client</span>
+              <span class="detail-value font-semibold">{client}</span>
+            </li>
+            <li class="flex justify-between py-4 border-b border-white/5">
+              <span class="detail-label font-medium opacity-70">Location</span>
+              <span class="detail-value font-semibold">{location}</span>
+            </li>
+            <li class="flex justify-between py-4 border-b border-white/5">
+              <span class="detail-label font-medium opacity-70">Project Size</span>
+              <span class="detail-value font-semibold">{size}</span>
+            </li>
+            <li class="flex justify-between py-4 border-b border-white/5">
+              <span class="detail-label font-medium opacity-70">Completion</span>
+              <span class="detail-value font-semibold">{completion}</span>
+            </li>
+            <li class="flex justify-between py-4 border-b border-white/5">
+              <span class="detail-label font-medium opacity-70">Duration</span>
+              <span class="detail-value font-semibold">{duration}</span>
+            </li>
+            <li class="flex justify-between py-4 border-b border-white/5">
+              <span class="detail-label font-medium opacity-70">Architect</span>
+              <span class="detail-value font-semibold">{architect}</span>
+            </li>
+            <li class="flex justify-between py-4 border-b border-white/5">
+              <span class="detail-label font-medium opacity-70">Certification</span>
+              <span class="detail-value font-semibold">{certification || 'N/A'}</span>
+            </li>
+            <li class="flex justify-between py-4">
+              <span class="detail-label font-medium opacity-70">Awards</span>
+              <span class="detail-value font-semibold">{awards || 'None'}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="key-features py-20 bg-white/[0.02] relative overflow-hidden">
+      <div class="section-pattern absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23b38728\" fill-opacity=\"0.4\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-6 inline-block relative text-light">
+            Key <span class="text-primary">Features</span>
+            <span class="absolute bottom-0 left-1/2 w-24 h-1 bg-gradient-primary -translate-x-1/2 rounded-full"></span>
+          </h2>
+          <p class="text-xl max-w-3xl mx-auto opacity-80 text-light">Innovative elements that define this exceptional project</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map(feature => (
+            <div class="feature-card bg-white/5 rounded-xl p-8 backdrop-blur-sm border border-white/5 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg relative overflow-hidden">
+              <div class="feature-card-top absolute top-0 left-0 w-full h-[5px] bg-gradient-primary"></div>
+              <div class="feature-icon w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-semibold text-primary mb-4">{typeof feature === 'string' ? feature : feature.title}</h3>
+              {typeof feature !== 'string' && <p class="leading-relaxed opacity-80 text-light">{feature.description}</p>}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="project-gallery py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl font-bold mb-16 text-center text-light">
+          <span class="text-primary">Project</span> Gallery
+        </h2>
+        <div class="gallery-grid grid grid-cols-12 gap-4 h-[600px] opacity-0 transform translate-y-12 transition-all duration-1000 animate-slide-up" id="galleryGrid">
+          {gallery && gallery.map((item, index) => (
+            <div class={`gallery-item ${index === 0 ? 'first-item' : 'other-item'} rounded-xl overflow-hidden relative group`}>
+              <img src={item.src} alt={item.alt} class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-primary">{item.alt}</h3>
+                  <p class="text-light opacity-80">{item.caption}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="model-viewer-section py-24 bg-white/[0.02] relative overflow-hidden">
+      <div class="section-pattern absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(var(--primary) 2px, transparent 2px); background-size: 30px 30px;"></div>
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <h2 class="text-4xl font-bold mb-16 text-center text-light">
+          <span class="text-primary">3D</span> Architectural Model
+        </h2>
+        <div class="model-container relative h-[500px] bg-white/5 rounded-xl overflow-hidden perspective-[1000px]">
+          <div class="model-placeholder absolute inset-0 flex flex-col items-center justify-center text-center">
+            <div class="model-cube transform-style-preserve-3d animate-rotate">
+              <div class="cube-face cube-front bg-primary/10 border-2 border-primary flex items-center justify-center">
+                <span class="text-primary font-bold">FRONT</span>
+              </div>
+              <div class="cube-face cube-back bg-primary/10 border-2 border-primary flex items-center justify-center">
+                <span class="text-primary font-bold">BACK</span>
+              </div>
+              <div class="cube-face cube-right bg-primary/10 border-2 border-primary flex items-center justify-center">
+                <span class="text-primary font-bold">RIGHT</span>
+              </div>
+              <div class="cube-face cube-left bg-primary/10 border-2 border-primary flex items-center justify-center">
+                <span class="text-primary font-bold">LEFT</span>
+              </div>
+              <div class="cube-face cube-top bg-primary/10 border-2 border-primary flex items-center justify-center">
+                <span class="text-primary font-bold">TOP</span>
+              </div>
+              <div class="cube-face cube-bottom bg-primary/10 border-2 border-primary flex items-center justify-center">
+                <span class="text-primary font-bold">BOTTOM</span>
+              </div>
+            </div>
+            <h3 class="text-2xl font-semibold text-primary mt-8 mb-2">Interactive 3D Model</h3>
+            <p class="max-w-md opacity-70 text-light">Explore {title} in immersive 3D. Discover every detail of this architectural masterpiece.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial-section py-24">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="testimonial-container bg-white/5 rounded-xl p-12 backdrop-blur-md border border-white/10 relative">
+          <div class="quote-icon absolute top-8 right-8 text-primary/20 text-8xl font-serif">"</div>
+          <p class="testimonial-text text-2xl leading-relaxed text-light mb-6">{testimonial?.text || 'No testimonial available.'}</p>
+          <div class="testimonial-author flex items-center gap-4">
+            <div class="author-avatar w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+              <span class="text-primary font-bold">{testimonial?.author?.[0] || 'A'}</span>
+            </div>
+            <div>
+              <p class="author-name font-semibold text-primary">{testimonial?.author || 'Anonymous'}</p>
+              <p class="author-role opacity-70 text-light">{testimonial?.role || 'Client'}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="next-projects py-24 bg-white/[0.02]">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl font-bold mb-16 text-center text-light">
+          Explore <span class="text-primary">Next</span> Projects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {nextProjects.map(project => (
+            <a href={`/projects/${project.slug}`} class="project-card bg-white/5 rounded-xl overflow-hidden transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg">
+              <img src={project.image} alt={project.title} class="w-full h-48 object-cover" />
+              <div class="p-6">
+                <span class="inline-block px-4 py-1 bg-primary/20 text-primary text-sm rounded-full mb-4">{project.category}</span>
+                <h3 class="text-2xl font-semibold text-light mb-2">{project.title}</h3>
+                <p class="text-light opacity-80">{project.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  :root {
+    --primary: #f97316;
+    --accent: #fb923c;
+    --dark: #1a1a1a;
+    --light: #ffffff;
+    --gradient-primary: linear-gradient(to right, #f97316, #fb923c);
+  }
+
+  .animate-zoom-fade { animation: zoomFade 1.5s ease-out forwards; }
+  .animate-slide-up { animation: slideUp 0.8s ease-out forwards; }
+  .animation-delay-300 { animation-delay: 0.3s; }
+  .animation-delay-500 { animation-delay: 0.5s; }
+  .animation-delay-700 { animation-delay: 0.7s; }
+
+  @keyframes zoomFade {
+    from { opacity: 0; transform: scale(1.1); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .first-item {
+    grid-column: span 8;
+    grid-row: span 2;
+  }
+  .other-item {
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+
+  .model-cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 10s infinite linear;
+  }
+  .cube-face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+  }
+  .cube-front { transform: translateZ(50px); }
+  .cube-back { transform: translateZ(-50px) rotateY(180deg); }
+  .cube-right { transform: translateX(50px) rotateY(90deg); }
+  .cube-left { transform: translateX(-50px) rotateY(-90deg); }
+  .cube-top { transform: translateY(-50px) rotateX(90deg); }
+  .cube-bottom { transform: translateY(50px) rotateX(-90deg); }
+
+  @keyframes rotate {
+    from { transform: rotateX(0deg) rotateY(0deg); }
+    to { transform: rotateX(360deg) rotateY(360deg); }
+  }
+
+  @media (max-width: 768px) {
+    .project-header { height: 50vh; }
+    .project-title { font-size: 2.5rem; }
+    .project-stats { gap: 1rem; }
+    .gallery-grid { 
+      height: auto; 
+      grid-template-columns: 1fr; 
+      grid-template-rows: auto; 
+    }
+    .first-item, .other-item { 
+      grid-column: span 1; 
+      grid-row: span 1; 
+    }
+  }
+</style>
